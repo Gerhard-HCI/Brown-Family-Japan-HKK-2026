@@ -1,2163 +1,647 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#0e0c0a">
-<meta name="color-scheme" content="light">
-<meta name="format-detection" content="telephone=no">
-<title>Aaron &amp; Michelle Brown — Japan Road Trip 2026</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An Autumn Passage North · 1–6 November 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  /* ─────────────────────────────────────────────────────────────
-     PALETTE — Brown / Achefabroad-adjacent
-     Edit these tokens to re-skin the entire app
-  ───────────────────────────────────────────────────────────── */
-  :root {
-    --ink: #0e0c0a;
-    --ink-2: #2a2520;
-    --ink-3: #5a5048;
-    --parchment: #f5f0e8;
-    --warm-white: #faf7f2;
-    --cream: #f0ece5;
-    --gold: #b8935a;
-    --gold-light: #d4ae7a;
-    --gold-soft: #e8d5b8;
-    --muted: #7a7168;
-    --rule: #d8cfc0;
-    --rule-soft: #ebe5d8;
-    --lunch-bg: #eef4ee;
-    --lunch-text: #2d5a2d;
-    --dinner-bg: #f4eee8;
-    --dinner-text: #6b3a1f;
-    --sight-bg: #e8eef4;
-    --sight-text: #1f3a6b;
-    --shadow: 0 2px 12px rgba(14,12,10,.08), 0 1px 3px rgba(14,12,10,.05);
-    --shadow-lg: 0 8px 28px rgba(14,12,10,.12);
-    --radius: 14px;
-    --radius-md: 10px;
-    --radius-sm: 6px;
+  /* ============ RESET ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  /* ============ BASE ============ */
+  body {
+    background-color: #15100F;
+    background-image: linear-gradient(180deg, #15100F 0%, #1A1311 55%, #140E0D 100%);
+    color: #EBE2D1;
+    font-family: 'Cormorant Garamond', 'Shippori Mincho', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.72;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-font-family: ‘Jost’, -apple-system, BlinkMacSystemFont, sans-serif;
-font-weight: 300;
-line-height: 1.7;
-overflow-x: hidden;
--webkit-font-smoothing: antialiased;
-min-height: 100vh;
-}
-a { color: inherit; text-decoration: none; }
-button { font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; border: none; background: none; }
-input { font-family: inherit; }
+  ::selection { background: #C5A35A; color: #15100F; }
 
-/* ─── HERO (preserved exactly as designed) ─────────────────── */
-.hero {
-min-height: 100vh;
-min-height: 100svh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 60px 24px 80px;
-position: relative;
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-overflow: hidden;
-}
-.hero::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background:
-radial-gradient(ellipse 80% 60% at 50% 20%, rgba(184,147,90,0.10) 0%, transparent 70%),
-radial-gradient(ellipse 60% 40% at 80% 80%, rgba(184,147,90,0.06) 0%, transparent 60%);
-pointer-events: none;
-}
-.hero-kana {
-font-family: ‘Shippori Mincho’, serif;
-font-size: clamp(11px, 2.5vw, 14px);
-letter-spacing: 0.35em;
-color: #b8935a;
-color: var(–gold, #b8935a);
-margin-bottom: 28px;
-opacity: 0;
-animation: fadeUp 1s 0.2s forwards;
-}
-.hero-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(40px, 10vw, 88px);
-font-weight: 300;
-line-height: 1.05;
-letter-spacing: -0.01em;
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-max-width: 700px;
-opacity: 0;
-animation: fadeUp 1s 0.4s forwards;
-}
-.hero-title em {
-font-style: italic;
-color: #d4ae7a;
-color: var(–gold-light, #d4ae7a);
-}
-.hero-rule {
-width: 60px;
-height: 1px;
-background: #b8935a;
-background: var(–gold, #b8935a);
-margin: 32px auto;
-opacity: 0;
-animation: fadeUp 1s 0.6s forwards;
-}
-.hero-meta {
-font-size: 12px;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-color: #7a7168;
-color: var(–muted, #7a7168);
-opacity: 0;
-animation: fadeUp 1s 0.8s forwards;
-line-height: 2;
-}
-.hero-meta strong {
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-font-weight: 400;
-}
-.scroll-cue {
-position: absolute;
-bottom: 32px;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 8px;
-opacity: 0;
-animation: fadeUp 1s 1.2s forwards;
-}
-.scroll-cue span {
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: #7a7168;
-color: var(–muted, #7a7168);
-}
-.scroll-line {
-width: 1px;
-height: 40px;
-background: linear-gradient(to bottom, var(–gold), transparent);
-animation: scrollPulse 2s 2s infinite;
-}
+  a { color: #E0C588; text-decoration: none; }
 
-/* ─── OVERVIEW STRIP ───────────────────────────────────────── */
-.overview {
-background: #b8935a;
-background: var(–gold, #b8935a);
-padding: 20px 24px;
-display: flex;
-justify-content: center;
-gap: 0;
-flex-wrap: wrap;
-}
-.ov-item {
-text-align: center;
-padding: 8px 24px;
-border-right: 1px solid rgba(0,0,0,0.15);
-}
-.ov-item:last-child { border-right: none; }
-.ov-num {
-display: block;
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 28px;
-font-weight: 600;
-color: var(–ink);
-line-height: 1;
-}
-.ov-label {
-display: block;
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: rgba(14,12,10,0.65);
-margin-top: 4px;
-}
+  /* utility / labels */
+  .eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: #C5A35A;
+  }
+  .jp { font-family: 'Shippori Mincho', serif; }
 
-/* ─── STICKY APP HEADER (clock + tabs) ─────────────────────── */
-.app-header {
-position: sticky;
-top: 0;
-z-index: 100;
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-border-bottom: 1px solid rgba(184,147,90,0.18);
-box-shadow: 0 1px 0 rgba(0,0,0,0.3);
-}
-.app-header-inner {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px 16px;
-max-width: 900px;
-margin: 0 auto;
-}
-.app-brand {
-display: flex;
-flex-direction: column;
-line-height: 1.1;
-}
-.app-brand-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 14px;
-font-weight: 400;
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-letter-spacing: 0.02em;
-}
-.app-brand-sub {
-font-size: 9px;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-color: var(–muted);
-margin-top: 2px;
-}
-.app-clock {
-text-align: right;
-line-height: 1.1;
-}
-#jst-clock {
-font-family: ‘SF Mono’, ‘Menlo’, monospace;
-font-size: 14px;
-font-weight: 300;
-letter-spacing: 1px;
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-}
-#trip-day-label {
-display: block;
-font-size: 9px;
-color: var(–muted);
-letter-spacing: 0.12em;
-text-transform: uppercase;
-margin-top: 2px;
-}
-#trip-day-label.is-today {
-color: var(–gold-light);
-}
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
 
-/* ─── TAB NAV ──────────────────────────────────────────────── */
-.tab-nav {
-display: flex;
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-border-top: 1px solid rgba(184,147,90,0.10);
-max-width: 900px;
-margin: 0 auto;
-}
-.tab-btn {
-flex: 1;
-background: transparent;
-border-bottom: 2px solid transparent;
-color: rgba(245,240,232,0.45);
-font-size: 10.5px;
-font-weight: 500;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-padding: 11px 4px 9px;
-transition: color 0.2s, border-color 0.2s;
-}
-.tab-btn.active {
-color: #d4ae7a;
-color: var(–gold-light, #d4ae7a);
-border-bottom-color: #b8935a;
-border-bottom-color: var(–gold, #b8935a);
-}
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px 28px;
+    overflow: hidden;
+  }
+  /* giant atmospheric kanji */
+  .hero__kanji {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -52%);
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 800;
+    font-size: clamp(20rem, 58vw, 46rem);
+    line-height: 1;
+    color: #1F1714;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+  .hero__inner { position: relative; z-index: 1; max-width: 760px; }
+  .hero__eyebrow { margin-bottom: 30px; opacity: 0; animation: rise 1.1s ease .2s forwards; }
+  .hero__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(3.2rem, 9vw, 6.4rem);
+    line-height: 0.98;
+    letter-spacing: 0.005em;
+    color: #F2E9D6;
+    opacity: 0; animation: rise 1.1s ease .42s forwards;
+  }
+  .hero__title em { font-style: italic; font-weight: 400; color: #E0C588; }
+  .hero__rule {
+    width: 1px; height: 64px;
+    background: linear-gradient(180deg, #C5A35A, rgba(197,163,90,0));
+    margin: 38px auto 30px;
+    opacity: 0; animation: grow 1.2s ease .9s forwards;
+    transform-origin: top;
+  }
+  .hero__route {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.92rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: #B7A78C;
+    opacity: 0; animation: rise 1.1s ease 1.05s forwards;
+  }
+  .hero__meta {
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.22rem;
+    color: #9F9079;
+    opacity: 0; animation: rise 1.1s ease 1.2s forwards;
+  }
+  .hero__cue {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.4em;
+    text-transform: uppercase; color: #6E6253;
+    opacity: 0; animation: rise 1.4s ease 1.6s forwards;
+    z-index: 1;
+  }
+  .hero__cue span { display: block; margin: 0 auto; width: 1px; height: 26px; background: #6E6253; margin-top: 10px; animation: bob 2.4s ease-in-out infinite; }
 
-/* ─── CONTENT BG ───────────────────────────────────────────── */
-.content {
-background: #faf7f2;
-background: var(–warm-white, #faf7f2);
-color: #0e0c0a;
-color: var(–ink, #0e0c0a);
-min-height: 60vh;
-}
-.tab-panel {
-display: none;
-padding: 20px 16px 60px;
-max-width: 720px;
-margin: 0 auto;
-animation: panelFade 0.22s ease both;
-}
-.tab-panel.active { display: block; }
-@keyframes panelFade {
-from { opacity: 0; transform: translateY(6px); }
-to { opacity: 1; transform: translateY(0); }
-}
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes grow { from { opacity: 0; transform: scaleY(0); } to { opacity: 1; transform: scaleY(1); } }
+  @keyframes bob { 0%,100% { transform: translateY(0); opacity:.5 } 50% { transform: translateY(6px); opacity:1 } }
 
-.section-label {
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-color: var(–gold);
-padding: 14px 4px 10px;
-}
+  /* ============ INTRO ============ */
+  .intro { padding: 96px 0 40px; }
+  .intro p {
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    line-height: 1.6;
+    font-weight: 400;
+    color: #DCD2BF;
+    max-width: 760px;
+  }
+  .intro p .lead { color: #E0C588; font-style: italic; }
+  .intro .sig { margin-top: 26px; }
 
-/* ─── DAY CARDS ────────────────────────────────────────────── */
-.day-card {
-background: var(–parchment);
-border-radius: var(–radius);
-margin-bottom: 12px;
-box-shadow: var(–shadow);
-overflow: hidden;
-border: 1px solid var(–rule-soft);
-animation: cardIn 0.28s ease both;
-}
-@keyframes cardIn {
-from { opacity: 0; transform: translateY(8px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.day-card.is-today {
-border-color: var(–gold);
-box-shadow: 0 0 0 1.5px var(–gold), var(–shadow);
-}
-.day-card.is-past { opacity: 0.6; }
-.day-header {
-display: flex;
-align-items: center;
-gap: 14px;
-padding: 16px 18px;
-user-select: none;
-}
-.day-num {
-width: 42px;
-height: 42px;
-border-radius: 50%;
-flex-shrink: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 18px;
-font-weight: 600;
-background: var(–cream);
-color: var(–ink-3);
-}
-.day-card.is-today .day-num {
-background: var(–gold);
-color: var(–ink);
-}
-.day-header-info { flex: 1; min-width: 0; }
-.day-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 19px;
-font-weight: 400;
-color: var(–ink);
-line-height: 1.2;
-}
-.day-name em { font-style: italic; color: var(–gold); }
-.day-sub {
-display: flex;
-align-items: center;
-gap: 8px;
-flex-wrap: wrap;
-margin-top: 4px;
-font-size: 11px;
-color: var(–muted);
-letter-spacing: 0.06em;
-}
-.day-pref-badge {
-font-size: 9px;
-font-weight: 600;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-padding: 2px 7px;
-border-radius: 4px;
-background: var(–cream);
-color: var(–ink-2);
-}
-.today-pill {
-font-size: 9px;
-font-weight: 700;
-background: var(–gold);
-color: var(–ink);
-padding: 2px 8px;
-border-radius: 12px;
-letter-spacing: 0.1em;
-}
-.day-chevron {
-color: var(–muted);
-font-size: 14px;
-flex-shrink: 0;
-transition: transform 0.25s cubic-bezier(.4,0,.2,1);
-}
-.day-card.open .day-chevron { transform: rotate(180deg); }
-.day-body {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s cubic-bezier(.4,0,.2,1);
-}
-.day-card.open .day-body { max-height: 6000px; }
-.day-body-inner { padding: 0 18px 18px; }
+  /* ============ DAY CHAPTERS ============ */
+  main { padding-bottom: 40px; }
+  .day { padding: 70px 0 30px; position: relative; }
 
-/* ─── HOTEL & WEATHER BARS ─────────────────────────────────── */
-.hotel-bar {
-display: flex;
-align-items: center;
-gap: 11px;
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-border-radius: var(–radius-md);
-padding: 11px 14px;
-margin-bottom: 12px;
-}
-.hb-icon {
-font-size: 16px;
-color: var(–gold-light);
-}
-.hb-info { flex: 1; min-width: 0; }
-.hb-label {
-font-size: 9px;
-color: var(–gold-light);
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 500;
-}
-.hb-name {
-font-size: 13px;
-color: var(–parchment);
-margin-top: 1px;
-}
-.hb-link {
-font-size: 11px;
-color: var(–gold-light);
-border: 1px solid rgba(212,174,122,0.35);
-padding: 5px 10px;
-border-radius: var(–radius-sm);
-flex-shrink: 0;
-}
+  .day__head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .day__numeral {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 600;
+    font-size: clamp(4.5rem, 11vw, 7.5rem);
+    line-height: 0.8;
+    color: #C5A35A;
+    text-shadow: 0 0 36px rgba(197,163,90,0.18);
+  }
+  .day__headtext .eyebrow { display: block; margin-bottom: 8px; }
+  .day__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+    line-height: 1.04;
+    color: #F2E9D6;
+  }
+  .day__passage {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8F8169;
+    margin-top: 10px;
+  }
+  .day__passage b { color: #C5A35A; font-weight: 400; }
 
-.weather-widget {
-display: flex;
-align-items: center;
-gap: 11px;
-background: #fff8ed;
-border: 1px solid var(–gold-soft);
-border-radius: var(–radius-md);
-padding: 11px 14px;
-margin-bottom: 14px;
-}
-.wx-icon { font-size: 26px; }
-.wx-info { flex: 1; }
-.wx-temp { font-size: 14px; font-weight: 500; color: var(–ink); }
-.wx-desc { font-size: 11px; color: var(–muted); margin-top: 2px; }
-.wx-rain {
-font-size: 12px;
-font-weight: 500;
-color: #1d6fad;
-flex-shrink: 0;
-}
-.wx-loading {
-font-size: 12px;
-color: var(–muted);
-animation: pulse 1.5s ease infinite;
-}
-@keyframes pulse { 0%,100%{opacity:.5;} 50%{opacity:1;} }
+  /* timeline */
+  .stops {
+    border-left: 1px solid rgba(197,163,90,0.26);
+    margin-left: clamp(14px, 4vw, 44px);
+    padding-left: clamp(26px, 5vw, 46px);
+    margin-top: 26px;
+  }
+  .stop { position: relative; padding: 22px 0; }
+  .stop + .stop { border-top: 1px solid rgba(235,226,209,0.08); }
+  .stop::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * clamp(26px, 5vw, 46px) - 5px);
+    top: 32px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #15100F;
+    border: 1px solid #C5A35A;
+  }
+  .stop[data-key]::after {
+    content: attr(data-key);
+    position: absolute;
+    left: calc(-1 * clamp(26px, 5vw, 46px) - 4px);
+    top: 30px;
+    transform: translateX(-100%) translateX(-12px);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #7E7259;
+    white-space: nowrap;
+    display: none;
+  }
+  .stop__key {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #9A6F4F;
+    margin-bottom: 7px;
+  }
+  .stop__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #F1E8D5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 14px;
+  }
+  .stop__jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.06rem;
+    font-weight: 500;
+    color: #C5A35A;
+  }
+  .stars { color: #E0C588; font-size: 0.9rem; letter-spacing: 0.12em; }
+  .stop__loc {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8F8169;
+    margin-top: 6px;
+  }
+  .stop__note { margin-top: 9px; color: #C3B8A3; font-size: 1.05rem; line-height: 1.62; max-width: 60ch; }
+  .stop__note .flag { color: #D9A441; font-style: italic; }
 
-.day-note-bar {
-background: #fff8f0;
-border-left: 3px solid var(–gold);
-border-radius: var(–radius-sm);
-padding: 10px 14px;
-font-size: 12.5px;
-color: var(–ink-2);
-line-height: 1.6;
-margin-bottom: 12px;
-}
+  .tag {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 3px 10px 2px;
+    border: 1px solid;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .tag--culture { color: #E1A86F; border-color: rgba(225,168,111,0.45); }
+  .tag--stay { color: #C5A35A; border-color: rgba(197,163,90,0.4); }
+  .tag--depart { color: #C8705A; border-color: rgba(200,112,90,0.5); }
 
-/* ─── DRIVE NOTE ───────────────────────────────────────────── */
-.drive-note {
-display: flex;
-align-items: center;
-gap: 10px;
-background: var(–cream);
-border-radius: var(–radius-sm);
-padding: 10px 14px;
-margin: 14px 0;
-font-size: 12px;
-color: var(–muted);
-letter-spacing: 0.04em;
-}
-.drive-note::before {
-content: ‘→’;
-font-size: 16px;
-color: var(–gold);
-flex-shrink: 0;
-}
+  /* section divider */
+  .divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, rgba(197,163,90,0), rgba(197,163,90,0.4), rgba(197,163,90,0));
+    margin: 8px 0;
+  }
 
-/* ─── STOP TIMELINE ────────────────────────────────────────── */
-.timeline {
-position: relative;
-padding-left: 70px;
-}
-.stop-item {
-position: relative;
-margin-bottom: 14px;
-}
-.stop-item::after {
-content: ‘’;
-position: absolute;
-left: -16px;
-top: 30px;
-bottom: -14px;
-width: 1.5px;
-background: var(–rule);
-z-index: 1;
-}
-.stop-item:last-child::after { display: none; }
-.stop-time {
-position: absolute;
-left: -68px;
-top: 12px;
-width: 50px;
-text-align: right;
-font-size: 10px;
-font-weight: 500;
-color: var(–muted);
-line-height: 1.4;
-letter-spacing: 0.04em;
-}
-.stop-dot {
-position: absolute;
-left: -25px;
-top: 10px;
-width: 18px;
-height: 18px;
-border-radius: 50%;
-border: 2.5px solid #ccc;
-background: #fff;
-z-index: 2;
-}
-.stop-dot.t-restaurant { border-color: #6b3a1f; background: #f4eee8; }
-.stop-dot.t-activity   { border-color: #1f3a6b; background: #e8eef4; }
-.stop-dot.t-transport  { border-color: #5a5048; background: var(–cream); }
-.stop-dot.t-hotel      { border-color: #2d5a2d; background: #eef4ee; }
-.stop-dot.t-sight      { border-color: var(–gold); background: #fff8ed; }
+  /* ============ APPENDIX ============ */
+  .appendix { padding: 90px 0 40px; }
+  .appendix__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #F2E9D6;
+    margin-bottom: 6px;
+  }
+  .appendix__sub { margin-bottom: 40px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .col h3 {
+    font-family: 'Jost', sans-serif; font-weight: 400;
+    font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: #C5A35A; margin-bottom: 18px;
+  }
+  .seq { list-style: none; counter-reset: s; }
+  .seq li {
+    counter-increment: s;
+    position: relative;
+    padding: 10px 0 10px 40px;
+    border-top: 1px solid rgba(235,226,209,0.08);
+    color: #D2C8B4;
+    font-size: 1.08rem;
+  }
+  .seq li:first-child { border-top: 0; }
+  .seq li::before {
+    content: counter(s, decimal-leading-zero);
+    position: absolute; left: 0; top: 11px;
+    font-family: 'Jost', sans-serif; font-size: 0.74rem; letter-spacing: 0.1em;
+    color: #8A6A4A;
+  }
+  .seq li b { color: #EFE6D3; font-weight: 500; }
+  .seq li span { color: #8F8169; font-size: 0.82rem; font-family: 'Jost', sans-serif; letter-spacing: 0.04em; }
+  .notes li { list-style: none; padding: 10px 0; border-top: 1px solid rgba(235,226,209,0.08); color: #C3B8A3; font-size: 1.05rem; }
+  .notes li:first-child { border-top: 0; }
+  .notes li b { color: #E0C588; font-weight: 500; font-style: italic; }
 
-.stop-card {
-background: var(–warm-white);
-border-radius: var(–radius-md);
-border: 1px solid var(–rule-soft);
-padding: 13px 15px;
-}
-.stop-top {
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
-gap: 8px;
-margin-bottom: 6px;
-}
-.stop-title-wrap { flex: 1; min-width: 0; }
-.stop-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 18px;
-font-weight: 500;
-color: var(–ink);
-line-height: 1.25;
-}
-.stop-title-jp {
-font-family: ‘Shippori Mincho’, serif;
-font-size: 11px;
-color: var(–muted);
-margin-top: 2px;
-display: block;
-}
-.stop-subtitle {
-font-size: 11px;
-color: var(–muted);
-letter-spacing: 0.06em;
-margin-top: 4px;
-}
-.stop-badge {
-font-size: 9px;
-font-weight: 600;
-padding: 3px 8px;
-border-radius: 4px;
-flex-shrink: 0;
-white-space: nowrap;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-}
-.stop-badge.b-lunch  { background: var(–lunch-bg); color: var(–lunch-text); }
-.stop-badge.b-dinner { background: var(–dinner-bg); color: var(–dinner-text); }
-.stop-badge.b-sight  { background: var(–sight-bg); color: var(–sight-text); }
-.stop-badge.b-info   { background: var(–cream); color: var(–ink-2); }
+  /* ============ FOOTER ============ */
+  footer { text-align: center; padding: 70px 28px 80px; }
+  footer .mark { font-family: 'Shippori Mincho', serif; font-size: 1.7rem; color: #C5A35A; letter-spacing: 0.3em; }
+  footer .line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: #8F8169; margin-top: 16px; }
+  footer .sig { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.34em; text-transform: uppercase; color: #5F5547; margin-top: 22px; }
 
-.stop-awards {
-display: flex;
-flex-wrap: wrap;
-gap: 5px;
-margin: 8px 0;
-}
-.award {
-font-size: 9px;
-letter-spacing: 0.08em;
-padding: 2px 8px;
-border: 1px solid var(–rule);
-border-radius: 3px;
-color: var(–muted);
-text-transform: uppercase;
-}
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .stops .stop { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+  .stops.in .stop { opacity: 1; transform: translateY(0); }
+  .stops.in .stop:nth-child(2) { transition-delay: .08s; }
+  .stops.in .stop:nth-child(3) { transition-delay: .16s; }
+  .stops.in .stop:nth-child(4) { transition-delay: .24s; }
+  .stops.in .stop:nth-child(5) { transition-delay: .32s; }
+  .stops.in .stop:nth-child(6) { transition-delay: .40s; }
 
-.stop-notes {
-font-size: 12.5px;
-line-height: 1.6;
-color: var(–ink-2);
-margin-top: 8px;
-}
-.stop-notes em { font-style: italic; color: var(–gold); }
-.stop-hours {
-font-size: 11.5px;
-color: var(–muted);
-border-left: 2px solid var(–gold);
-padding-left: 11px;
-line-height: 1.5;
-margin-top: 10px;
-}
-.stop-book {
-display: inline-block;
-margin-top: 10px;
-font-size: 11px;
-font-weight: 500;
-letter-spacing: 0.06em;
-color: var(–gold);
-border-bottom: 1px solid var(–gold-light);
-padding-bottom: 1px;
-}
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 680px) {
+    body { font-size: 18px; }
+    .day__head { grid-template-columns: 1fr; gap: 6px; }
+    .day__numeral { font-size: 4.2rem; }
+    .stops { margin-left: 6px; padding-left: 22px; }
+    .stop::before { left: -27px; }
+    .cols { grid-template-columns: 1fr; gap: 40px; }
+    .stop__name { font-size: 1.5rem; }
+  }
 
-/* ─── MAP ACTIONS ──────────────────────────────────────────── */
-.map-actions {
-display: flex;
-gap: 6px;
-margin-top: 12px;
-}
-.map-btn {
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 5px;
-padding: 9px 6px;
-border-radius: var(–radius-sm);
-font-size: 11px;
-font-weight: 500;
-min-height: 36px;
-border: 1px solid var(–rule);
-background: var(–parchment);
-color: var(–ink-2);
-}
-.map-btn:active { transform: scale(0.96); }
-.map-btn.primary {
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-border-color: #0e0c0a;
-border-color: var(–ink, #0e0c0a);
-font-weight: 600;
-}
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal, .stops .stop { opacity: 1 !important; transform: none !important; }
+    .hero__eyebrow, .hero__title, .hero__rule, .hero__route, .hero__meta, .hero__cue { opacity: 1 !important; transform: none !important; }
+    html { scroll-behavior: auto; }
+  }
 
-/* ─── BOOKING PRIORITY (preserved) ─────────────────────────── */
-.booking-block {
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-border-radius: var(–radius);
-padding: 24px 20px;
-margin: 20px 0;
-}
-.booking-block .section-label { color: var(–gold); padding: 0 0 10px; }
-.booking-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 24px;
-font-weight: 300;
-line-height: 1.2;
-margin-bottom: 4px;
-}
-.booking-title em { font-style: italic; color: var(–gold-light); }
-.booking-sub {
-font-size: 11px;
-color: var(–muted);
-letter-spacing: 0.1em;
-text-transform: uppercase;
-margin-bottom: 16px;
-}
-.booking-list { list-style: none; }
-.booking-item {
-display: flex;
-align-items: center;
-gap: 14px;
-padding: 12px 0;
-border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.booking-item:last-child { border-bottom: none; }
-.booking-rank {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 22px;
-color: var(–gold);
-width: 24px;
-flex-shrink: 0;
-}
-.booking-name { flex: 1; font-size: 13px; color: var(–parchment); }
-.booking-name span {
-display: block;
-font-size: 10.5px;
-color: var(–muted);
-margin-top: 2px;
-}
-.booking-urgency {
-font-size: 9px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-padding: 3px 9px;
-border-radius: 3px;
-flex-shrink: 0;
-font-weight: 600;
-}
-.urgency-high { background: rgba(184,147,90,0.22); color: var(–gold-light); }
-.urgency-med  { background: rgba(255,255,255,0.07); color: var(–muted); }
-
-/* ─── FULL ROUTE BUTTON ───────────────────────────────────── */
-.route-btn-wrap {
-text-align: center;
-padding: 24px 0 8px;
-}
-.route-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-padding: 14px 26px;
-border-radius: var(–radius-sm);
-font-size: 12px;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-font-weight: 400;
-}
-
-/* ─── UTILITY CARDS ───────────────────────────────────────── */
-.util-card {
-background: var(–parchment);
-border-radius: var(–radius);
-padding: 18px 20px;
-box-shadow: var(–shadow);
-border: 1px solid var(–rule-soft);
-margin-bottom: 14px;
-}
-.util-card-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 20px;
-font-weight: 400;
-color: var(–ink);
-margin-bottom: 14px;
-}
-.util-card-title em { color: var(–gold); font-style: italic; }
-
-/* Currency */
-.fx-row {
-display: flex;
-gap: 8px;
-align-items: flex-end;
-}
-.fx-group { flex: 1; }
-.fx-label {
-font-size: 10px;
-font-weight: 500;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-color: var(–muted);
-margin-bottom: 6px;
-}
-.fx-input {
-width: 100%;
-padding: 11px 13px;
-border: 1.5px solid var(–rule);
-border-radius: var(–radius-sm);
-font-size: 18px;
-font-weight: 500;
-color: var(–ink);
-background: var(–warm-white);
-outline: none;
--webkit-appearance: none;
-}
-.fx-input:focus { border-color: var(–gold); }
-.fx-swap-btn {
-width: 38px;
-height: 38px;
-border-radius: 50%;
-background: var(–cream);
-color: var(–ink);
-font-size: 17px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-margin-bottom: 1px;
-}
-.fx-rate-note {
-font-size: 11px;
-color: var(–muted);
-text-align: center;
-margin-top: 12px;
-line-height: 1.5;
-}
-
-/* Info / Etiquette lists */
-.info-list { list-style: none; }
-.info-list li {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-padding: 11px 0;
-border-bottom: 1px solid var(–rule-soft);
-font-size: 13px;
-line-height: 1.6;
-}
-.info-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.info-emoji { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
-.info-text { color: var(–ink-2); }
-.info-text strong { color: var(–ink); display: block; margin-bottom: 1px; font-weight: 500; }
-
-/* Hotels at a glance */
-.hotel-row {
-display: flex;
-align-items: center;
-gap: 12px;
-padding: 11px 0;
-border-bottom: 1px solid var(–rule-soft);
-}
-.hotel-row:last-child { border-bottom: none; padding-bottom: 0; }
-.hotel-row-info { flex: 1; min-width: 0; }
-.hotel-row-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 16px;
-font-weight: 500;
-color: var(–ink);
-}
-.hotel-row-detail {
-font-size: 11px;
-color: var(–muted);
-margin-top: 2px;
-letter-spacing: 0.04em;
-}
-.hotel-row-link {
-font-size: 11px;
-color: var(–gold);
-border: 1px solid var(–gold-soft);
-padding: 5px 10px;
-border-radius: var(–radius-sm);
-}
-
-/* ─── IDEAS ───────────────────────────────────────────────── */
-.ideas-banner {
-background: #0e0c0a;
-background: linear-gradient(135deg, var(–ink, #0e0c0a) 0%, #1a1612 100%);
-border-radius: var(–radius);
-padding: 22px 20px;
-margin-bottom: 14px;
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-position: relative;
-overflow: hidden;
-}
-.ideas-banner::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background: radial-gradient(ellipse at 80% 20%, rgba(184,147,90,0.12), transparent 60%);
-}
-.ideas-banner h2 {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 26px;
-font-weight: 300;
-margin-bottom: 4px;
-position: relative;
-}
-.ideas-banner h2 em { font-style: italic; color: var(–gold-light); }
-.ideas-banner p {
-font-size: 12px;
-color: var(–muted);
-position: relative;
-letter-spacing: 0.04em;
-}
-.idea-card {
-background: var(–parchment);
-border-radius: var(–radius);
-padding: 18px;
-margin-bottom: 10px;
-box-shadow: var(–shadow);
-border: 1px solid var(–rule-soft);
-}
-.idea-card-head {
-display: flex;
-align-items: flex-start;
-gap: 12px;
-margin-bottom: 8px;
-}
-.idea-emoji {
-font-size: 26px;
-width: 44px;
-height: 44px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: var(–radius-md);
-background: var(–cream);
-flex-shrink: 0;
-}
-.idea-info { flex: 1; min-width: 0; }
-.idea-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 18px;
-color: var(–ink);
-line-height: 1.2;
-}
-.idea-meta {
-display: flex;
-gap: 8px;
-margin-top: 5px;
-flex-wrap: wrap;
-}
-.idea-tag {
-font-size: 9.5px;
-font-weight: 500;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-padding: 2px 8px;
-border-radius: 4px;
-background: var(–cream);
-color: var(–muted);
-}
-.idea-tag.featured {
-background: var(–gold-soft);
-color: var(–dinner-text);
-}
-.idea-desc {
-font-size: 12.5px;
-color: var(–ink-2);
-line-height: 1.6;
-}
-.ideas-notice {
-background: #fff8ed;
-border: 1px solid var(–gold-soft);
-border-left: 3px solid var(–gold);
-border-radius: var(–radius-md);
-padding: 14px 16px;
-margin-bottom: 14px;
-font-size: 12.5px;
-line-height: 1.6;
-color: var(–ink-2);
-}
-.ideas-notice strong {
-display: block;
-font-size: 10px;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 6px;
-font-weight: 500;
-}
-
-/* ─── EMERGENCY ───────────────────────────────────────────── */
-.emergency-banner {
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-border-radius: var(–radius);
-padding: 20px;
-text-align: center;
-margin-bottom: 14px;
-}
-.emergency-banner h2 {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 22px;
-font-weight: 300;
-margin-bottom: 4px;
-}
-.emergency-banner p {
-font-size: 12px;
-color: var(–muted);
-letter-spacing: 0.04em;
-}
-.contact-card {
-background: var(–parchment);
-border-radius: var(–radius);
-overflow: hidden;
-box-shadow: var(–shadow);
-border: 1px solid var(–rule-soft);
-margin-bottom: 12px;
-}
-.contact-row {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 13px 16px;
-border-bottom: 1px solid var(–rule-soft);
-gap: 10px;
-}
-.contact-row:last-child { border-bottom: none; }
-.contact-left {
-display: flex;
-align-items: center;
-gap: 12px;
-flex: 1;
-min-width: 0;
-}
-.contact-icon {
-width: 38px;
-height: 38px;
-border-radius: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-flex-shrink: 0;
-}
-.ci-r { background: #fbe9e7; }
-.ci-g { background: #eef4ee; }
-.ci-b { background: #e8eef4; }
-.ci-n { background: var(–cream); }
-.contact-label {
-font-size: 13px;
-font-weight: 500;
-color: var(–ink);
-}
-.contact-sub {
-font-size: 11px;
-color: var(–muted);
-margin-top: 1px;
-letter-spacing: 0.03em;
-}
-.call-btn {
-display: inline-flex;
-align-items: center;
-gap: 5px;
-padding: 8px 14px;
-border-radius: var(–radius-sm);
-font-size: 12px;
-font-weight: 600;
-white-space: nowrap;
-letter-spacing: 0.04em;
-}
-.cn { background: #0e0c0a; background: var(–ink, #0e0c0a); color: #f5f0e8; color: var(–parchment, #f5f0e8); }
-.cr { background: #c62828; color: #fff; }
-.cg { background: #2e7d32; color: #fff; }
-.cb { background: #0277bd; color: #fff; }
-
-/* ─── TOAST ───────────────────────────────────────────────── */
-#toast {
-position: fixed;
-bottom: 28px;
-left: 50%;
-transform: translateX(-50%) translateY(16px);
-background: rgba(14,12,10,0.94);
-color: #f5f0e8;
-color: var(–parchment, #f5f0e8);
-padding: 9px 18px;
-border-radius: 20px;
-font-size: 13px;
-pointer-events: none;
-opacity: 0;
-transition: all 0.22s cubic-bezier(.4,0,.2,1);
-z-index: 999;
-white-space: nowrap;
-}
-#toast.show {
-opacity: 1;
-transform: translateX(-50%) translateY(0);
-}
-
-/* ─── FOOTER ──────────────────────────────────────────────── */
-footer {
-background: #0e0c0a;
-background: var(–ink, #0e0c0a);
-text-align: center;
-padding: 32px 24px;
-font-size: 11px;
-color: #7a7168;
-color: var(–muted, #7a7168);
-letter-spacing: 0.1em;
-line-height: 1.8;
-}
-footer span { color: #b8935a; color: var(–gold, #b8935a); }
-
-/* ─── ANIMATIONS ──────────────────────────────────────────── */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(16px); }
-to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes scrollPulse {
-0%, 100% { opacity: 0.4; }
-50% { opacity: 1; }
-}
-
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media (min-width: 700px) {
-.tab-btn { font-size: 12px; padding: 14px 20px; }
-.tab-panel { padding: 32px 32px 60px; }
-}
-@media (max-width: 480px) {
-.ov-item { padding: 8px 14px; }
-.timeline { padding-left: 64px; }
-.stop-time { left: -62px; width: 44px; }
-}
+  :focus-visible { outline: 2px solid #C5A35A; outline-offset: 3px; }
 </style>
-
 </head>
 <body>
 
-<!-- ═══════════════ HERO (preserved) ═══════════════ -->
-
-<section class="hero">
-  <p class="hero-kana">日本ロードトリップ ２０２６</p>
-  <h1 class="hero-title">Aaron &amp;<br><em>Michelle</em> Brown<br>Japan Road Trip</h1>
-  <div class="hero-rule"></div>
-  <p class="hero-meta">
-    <strong>November 1–6, 2026</strong><br>
-    Gunma · Tochigi · Miyagi · Yamagata · Niigata · Tokyo<br>
-    8 Destination Restaurants · 1 UNESCO World Heritage Site
-  </p>
-  <div class="scroll-cue">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- ═══════════════ OVERVIEW STRIP ═══════════════ -->
-
-<div class="overview">
-  <div class="ov-item"><span class="ov-num">6</span><span class="ov-label">Days</span></div>
-  <div class="ov-item"><span class="ov-num">8</span><span class="ov-label">Restaurants</span></div>
-  <div class="ov-item"><span class="ov-num">5</span><span class="ov-label">Prefectures</span></div>
-  <div class="ov-item"><span class="ov-num">~950</span><span class="ov-label">Kilometres</span></div>
-</div>
-
-<!-- ═══════════════ STICKY APP HEADER ═══════════════ -->
-
-<header class="app-header">
-  <div class="app-header-inner">
-    <div class="app-brand">
-      <span class="app-brand-name">Aaron &amp; Michelle Brown</span>
-      <span class="app-brand-sub">Happy Camper · Japan 2026</span>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__kanji jp" aria-hidden="true">秋</div>
+    <div class="hero__inner">
+      <div class="hero__eyebrow eyebrow">A Private Culinary Journey</div>
+      <h1 class="hero__title">An Autumn<br>Passage <em>North</em></h1>
+      <div class="hero__rule"></div>
+      <div class="hero__route">Tokyo&nbsp;·&nbsp;Gunma&nbsp;·&nbsp;Niigata&nbsp;·&nbsp;Sado</div>
+      <div class="hero__meta">Six days · 1–6 November 2026 · by private car &amp; rail</div>
     </div>
-    <div class="app-clock">
-      <span id="jst-clock">--:--</span>
-      <span id="trip-day-label">Japan Standard Time</span>
+    <div class="hero__cue">Begin<span></span></div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro wrap reveal">
+    <p><span class="lead">One continuous arc north</span> — from a Tokyo morning up through the maples of Gunma, over the mountains to the Sea of Japan, and out across the water to Sado. The trip is written around the table: counters and kaiseki, wood-fire and hand-cut soba, two Michelin-starred sushiya and a crossing for the island's morning catch. Four travellers, a car and driver throughout, and four nights under ryokan and harbour-view skies.</p>
+    <div class="sig eyebrow">The itinerary follows below, day by day.</div>
+  </section>
+
+  <main>
+
+    <!-- DAY 1 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">一</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day One · Sunday 1 November</span>
+          <h2 class="day__title">Tokyo to the Tanigawa mountains</h2>
+          <div class="day__passage">Passage <b>Tokyo → Gunma</b> · by car, about <b>2h45</b></div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Limousine departs Tokyo</div>
+          <p class="stop__note">North out of the city on a quiet Sunday road, into the rice country of eastern Gunma.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">Sushi Obana <span class="stop__jp jp">鮨おばな</span></div>
+          <div class="stop__loc">Tatebayashi, Gunma</div>
+          <p class="stop__note">A Tabelog Silver counter that opens its doors for lunch on Sundays alone — which is precisely why it anchors the first day. <span class="flag">Confirmed.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Afternoon</div>
+          <div class="stop__name">Ashikaga Flower Park <span class="stop__jp jp">あしかがフラワーパーク</span></div>
+          <div class="stop__loc">Ashikaga, Tochigi</div>
+          <p class="stop__note">A short walk through the gardens before turning northwest toward the mountains.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Evening <span class="tag tag--stay">Overnight</span></div>
+          <div class="stop__name">Bettei Senjuan <span class="stop__jp jp">別邸 仙寿庵</span></div>
+          <div class="stop__loc">Tanigawa Onsen, Minakami</div>
+          <p class="stop__note">A Relais &amp; Châteaux ryokan beneath Mt. Tanigawa — eighteen rooms, each with its own open-air spring bath, and a kaiseki dinner that stands in for any restaurant. <span class="flag">Two rooms for the two couples.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider"></div></div>
+
+    <!-- DAY 2 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">二</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day Two · Monday 2 November</span>
+          <h2 class="day__title">Through the gorge to the wine coast</h2>
+          <div class="day__passage">Passage <b>Gunma → Niigata coast</b> · by car, about <b>3h</b>, broken by the gorge</div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Kiyotsu Gorge · Tunnel of Light <span class="stop__jp jp">清津峡</span></div>
+          <div class="stop__loc">Tokamachi, Niigata</div>
+          <p class="stop__note">An early start drops you onto the Kan-etsu and out at the gorge — its mirrored tunnel framing maples at their early-November peak. <span class="flag">Reserve a timed entry.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">Cave d'Occi <span class="stop__jp jp">カーブドッチ</span></div>
+          <div class="stop__loc">Kakudahama · Niigata Wine Coast</div>
+          <p class="stop__note">A vineyard estate above the Sea of Japan. <span class="flag">Reserve a specific table — the French room, the wood-fired grill, or the Japanese counter.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Afternoon</div>
+          <div class="stop__name">Yahiko Shrine <span class="stop__jp jp">彌彦神社</span></div>
+          <div class="stop__loc">Yahiko, Niigata</div>
+          <p class="stop__note">Niigata's most revered shrine, its approach lit with autumn colour, a short way from tonight's lodging.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Dinner</div>
+          <div class="stop__name">Kappo Watanabe <span class="stop__jp jp">割烹 渡辺</span></div>
+          <div class="stop__loc">Maki, Nishikan · Niigata</div>
+          <p class="stop__note">Refined Niigata kappo cuisine, twelve minutes from the ryokan in the same ward.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Night <span class="tag tag--stay">Overnight</span></div>
+          <div class="stop__name">Shaga-no-Sato Yumeya <span class="stop__jp jp">著莪の里 ゆめや</span></div>
+          <div class="stop__loc">Iwamuro Onsen, Niigata</div>
+          <p class="stop__note">A quiet, garden-set onsen ryokan on the western coast.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider"></div></div>
+
+    <!-- DAY 3 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">三</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day Three · Tuesday 3 November <span class="tag tag--culture">Culture Day</span></span>
+          <h2 class="day__title">The craftsmen of Sanjo</h2>
+          <div class="day__passage">Passage <b>Iwamuro → Sanjo → Tsukioka</b> · by car, about <b>1h35</b></div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Marunao <span class="stop__jp jp">マルナオ</span></div>
+          <div class="stop__loc">Sanjo, Niigata</div>
+          <p class="stop__note">Ebony and rosewood worked into octagonal chopsticks by hand — an open workshop in the heart of Japan's metal-and-wood craft district, open through the holiday.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">UOZEN <span class="stop__jp jp">魚善</span> <span class="stars">★★</span></div>
+          <div class="stop__loc">Sanjo, Niigata</div>
+          <p class="stop__note">Two Michelin stars, set among the rice fields — a tasting drawn almost entirely from the land within sight of the table. <span class="flag">Reconfirm holiday hours.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Evening <span class="tag tag--stay">Overnight</span></div>
+          <div class="stop__name">Bettei Koshi-no-Sato <span class="stop__jp jp">別邸 越の里</span></div>
+          <div class="stop__loc">Tsukioka Onsen, Shibata</div>
+          <p class="stop__note">An all-suite ryokan in Niigata's amber-watered hot spring, with its kaiseki dinner taken in-house.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider"></div></div>
+
+    <!-- DAY 4 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">四</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day Four · Wednesday 4 November</span>
+          <h2 class="day__title">Shrine, soba, and into the city</h2>
+          <div class="day__passage">Passage <b>Tsukioka → Agano → Niigata City</b> · by car, about <b>1h20</b></div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Asaiino Shrine <span class="stop__jp jp">旦飯野神社</span></div>
+          <div class="stop__loc">Agano, Niigata</div>
+          <p class="stop__note">A serene hillside shrine known locally as a place of quiet power, after a slow onsen morning.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">Teuchi Soba Kishichi <span class="stop__jp jp">手打ちそば 鬼七</span></div>
+          <div class="stop__loc">Gosen, Niigata</div>
+          <p class="stop__note">A Michelin-listed soba house with a mossy garden, fifteen minutes from the shrine. <span class="flag">No reservations — put your name down right at the 11:30 opening.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Afternoon <span class="tag tag--stay">Two-night base</span></div>
+          <div class="stop__name">Hotel Nikko Niigata <span class="stop__jp jp">ホテル日航新潟</span></div>
+          <div class="stop__loc">Bandaijima · Niigata City</div>
+          <p class="stop__note">A high tower on the harbour, ten minutes from Furumachi and a step from the Sado terminal — your base for the next two nights.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Dinner</div>
+          <div class="stop__name">Kyodai Sushi <span class="stop__jp jp">兄弟寿し</span> <span class="stars">★★</span></div>
+          <div class="stop__loc">Furumachi · Niigata City</div>
+          <p class="stop__note">Two stars in the old geisha quarter — Niigata's finest counter.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider"></div></div>
+
+    <!-- DAY 5 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">五</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day Five · Thursday 5 November</span>
+          <h2 class="day__title">A crossing to Sado</h2>
+          <div class="day__passage">Passage <b>Niigata ⇄ Sado</b> · by jetfoil, about <b>67 min</b> each way</div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Jetfoil to Sado <span class="stop__jp jp">佐渡へ</span></div>
+          <div class="stop__loc">Niigata Port · Ryotsu</div>
+          <p class="stop__note">An early sailing from the terminal beside the hotel, out across the strait to the island.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">Benkei Honten <span class="stop__jp jp">廻転寿司 弁慶</span></div>
+          <div class="stop__loc">Sado · or Chozaburo 長三郎鮨</div>
+          <p class="stop__note">The morning's catch over Sado rice — the island's celebrated sushi, then a single nearby highlight before the return.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Dinner</div>
+          <div class="stop__name">UGA <span class="stop__jp jp">宇呀</span></div>
+          <div class="stop__loc">Furumachi · Niigata City</div>
+          <p class="stop__note">Wood-fire gastronomy at an eight-seat counter, a single seating cooked over open flame. <span class="flag">Books out far ahead — reserve first.</span></p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">If the sea is rough</div>
+          <div class="stop__name">Northern Culture Museum <span class="stop__jp jp">北方文化博物館</span></div>
+          <div class="stop__loc">Konan · the weather alternative</div>
+          <p class="stop__note">Should the crossing be cancelled, a grand landowner's estate and garden stands ready in its place — open Thursdays.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider"></div></div>
+
+    <!-- DAY 6 -->
+    <section class="day wrap">
+      <div class="day__head reveal">
+        <div class="day__numeral jp">六</div>
+        <div class="day__headtext">
+          <span class="eyebrow">Day Six · Friday 6 November</span>
+          <h2 class="day__title">A last garden, and the road home</h2>
+          <div class="day__passage">Passage <b>Niigata → Tokyo → Haneda</b> · by Grand Class rail &amp; car</div>
+        </div>
+      </div>
+      <div class="stops">
+        <div class="stop">
+          <div class="stop__key">Morning</div>
+          <div class="stop__name">Old Saito Villa <span class="stop__jp jp">旧齋藤家別邸</span></div>
+          <div class="stop__loc">Nishiōhata · Niigata City</div>
+          <p class="stop__note">A merchant family's villa and stroll garden, coffee, and a short walk through the lanes of Furumachi.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Lunch</div>
+          <div class="stop__name">Chiyozushi <span class="stop__jp jp">千代鮨</span></div>
+          <div class="stop__loc">In front of Niigata Station</div>
+          <p class="stop__note">A final sushi lunch steps from the platform — no detour before the train.</p>
+        </div>
+        <div class="stop">
+          <div class="stop__key">Afternoon <span class="tag tag--depart">Departure</span></div>
+          <div class="stop__name">Grand Class to Tokyo, then Haneda</div>
+          <div class="stop__loc">22:00 · ANA to Honolulu</div>
+          <p class="stop__note">The Joetsu Shinkansen's first-class car to Tokyo, a private car on to Haneda, and the night flight onward.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- APPENDIX -->
+  <section class="appendix wrap reveal">
+    <h2 class="appendix__title">Before the journey</h2>
+    <div class="appendix__sub eyebrow">What to secure, and what to confirm</div>
+    <div class="cols">
+      <div class="col">
+        <h3>Reserve first — hardest seats</h3>
+        <ol class="seq">
+          <li><b>Bettei Senjuan</b> <span>— two rooms</span></li>
+          <li><b>Bettei Koshi-no-Sato</b> <span>— two suites</span></li>
+          <li><b>UGA</b> <span>— eight seats, one seating</span></li>
+          <li><b>Kyodai Sushi</b> <span>— ★★</span></li>
+          <li><b>UOZEN</b> <span>— ★★</span></li>
+          <li><b>Kappo Watanabe</b></li>
+          <li><b>Sushi Obana</b> <span>· Hotel Nikko, two nights</span></li>
+          <li><b>Chiyozushi</b> <span>· 鬼七 is a queue, not a booking</span></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Worth a confirming call</h3>
+        <ul class="notes">
+          <li><b>Kiyotsu Gorge</b> — book a timed entry; early November is peak.</li>
+          <li><b>UOZEN</b> — reconfirm its hours on Culture Day.</li>
+          <li><b>Cave d'Occi</b> — choose and reserve the specific restaurant.</li>
+          <li><b>Sado</b> — Benkei is open Thursday; confirm Chozaburo if preferred, and hold the weather alternative.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <nav class="tab-nav">
-    <button class="tab-btn active" data-tab="itinerary">Itinerary</button>
-    <button class="tab-btn" data-tab="ideas">Ideas</button>
-    <button class="tab-btn" data-tab="utilities">Utilities</button>
-    <button class="tab-btn" data-tab="emergency">Emergency</button>
-  </nav>
-</header>
+  </section>
 
-<!-- ═══════════════ TAB CONTENT ═══════════════ -->
-
-<div class="content">
-  <div id="tab-itinerary" class="tab-panel active"></div>
-  <div id="tab-ideas" class="tab-panel"></div>
-  <div id="tab-utilities" class="tab-panel"></div>
-  <div id="tab-emergency" class="tab-panel"></div>
-</div>
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
-
-<footer>
-  <span>Aaron &amp; Michelle Brown</span> · Japan Road Trip · November 1–6, 2026<br>
-  Gunma · Tochigi · Miyagi · Yamagata · Niigata · Tokyo
-</footer>
-
-<div id="toast"></div>
+  <footer>
+    <div class="mark jp">秋 旅</div>
+    <div class="line">Tokyo to the Sea of Japan, and home again.</div>
+    <div class="sig">Itinerary · November 2026</div>
+  </footer>
 
 <script>
-(function(){
-'use strict';
-
-/* ════════════════════════════════════════════════════════════════
-   CONFIG — Edit these values to customize
-   ────────────────────────────────────────────────────────────────
-   FX_RATE: JPY per 1 USD (indicative — update before travel)
-   Weather: uses Open-Meteo (no API key required)
-   ═══════════════════════════════════════════════════════════════ */
-var FX_RATE = 152.67;
-
-/* ════════════════════════════════════════════════════════════════
-   TRIP DATA — Aaron & Michelle Brown · November 2026
-   ═══════════════════════════════════════════════════════════════ */
-var TRIP = {
-  tripTitle: 'Aaron & Michelle Brown — Japan Road Trip',
-  startDate: '2026-11-01',
-  endDate:   '2026-11-06',
-  travelers: 'Aaron & Michelle Brown',
-  hotels: [
-    { name:'VENTINOVE Auberge', nights:'Sun 1 Nov · Kawaba, Gunma', q:'VENTINOVE Kawaba Gunma' },
-    { name:'Sendai City',       nights:'Mon 2 Nov · Sendai, Miyagi', q:'Hotel Metropolitan Sendai' },
-    { name:'Osteria Sincerita', nights:'Tue 3 Nov · Akayu, Yamagata', q:'Osteria Sincerita Akayu Yamagata' },
-    { name:'Sanjo / Niigata',   nights:'Wed 4 Nov · Niigata Prefecture', q:'Sanjo Niigata Japan' },
-    { name:'Murakami / Niigata', nights:'Thu 5 Nov · Murakami area', q:'Murakami Niigata Japan' }
-  ],
-  days: [
-    /* ── DAY 1 ── */
-    {
-      date: '2026-11-01',
-      dayNum: 1,
-      weekday: 'Sunday 1 November',
-      title: 'The Beginning',
-      city: 'Gunma',
-      region: 'Tatebayashi · Kawaba',
-      hotel: 'VENTINOVE Auberge, Kawaba',
-      hq: 'VENTINOVE Kawaba Gunma',
-      coords: { lat:36.39, lon:139.06 },
-      notes: 'The opening of the journey. A long lunch at Sushi Obana — open Sunday only — followed by a mountain drive west to Kawaba for dinner at VENTINOVE.',
-      stops: [
-        {
-          time: '12:00',
-          title: 'Sushi Obana',
-          titleJp: '鮨おばな',
-          subtitle: '5-1 Ōtemachi, Tatebayashi, Gunma',
-          type: 'restaurant',
-          badge: 'Lunch',
-          badgeType: 'lunch',
-          awards: ['OAD #72', 'Tabelog Silver'],
-          locationName: 'Sushi Obana',
-          address: '5-1 Otemachi, Tatebayashi, Gunma',
-          mapsQuery: 'Sushi Obana Tatebayashi Gunma',
-          notes: 'The anchor of the entire trip. Chef Terukuni Obana trained at Kyubey in Ginza before returning to his hometown of Tatebayashi to open one of Japan\u2019s most quietly revered sushi counters. He sources his fish personally from Tsukiji each morning — the omakase unfolds as eleven courses of otsumami followed by twenty pieces of hand-formed nigiri. Sunday is the only day open for lunch.',
-          hours: 'Sunday only · Lunch 12:00–17:00 · Dinner Tue–Sat 17:30–21:30 · Closed Monday',
-          bookUrl: 'https://www.instagram.com/sushi_obana/',
-          bookLabel: 'Reserve via Pocket Concierge or Instagram'
-        },
-        {
-          time: 'drive',
-          isDrive: true,
-          notes: '1 hour west via Route 50 → Kawaba, Gunma'
-        },
-        {
-          time: '18:00',
-          title: 'VENTINOVE',
-          titleJp: 'ヴェンティノーヴェ',
-          subtitle: '2593-1 Yachi, Kawaba, Tone District, Gunma',
-          type: 'restaurant',
-          badge: 'Dinner',
-          badgeType: 'dinner',
-          awards: ['Tabelog Bronze'],
-          locationName: 'VENTINOVE',
-          address: '2593-1 Yachi, Kawaba, Tone District, Gunma',
-          mapsQuery: 'VENTINOVE Kawaba Gunma',
-          notes: 'Set on the grounds of the Tsuchida Sake Brewery in mountain Kawaba. Chef Yusuke Takeuchi cooks everything over wood fire, sourcing all ingredients from within a thirty-minute radius — foraged mushrooms, black truffles, hunted game, and the brewery\u2019s own sake lees in unexpected preparations. The Akagi beef bistecca is not to be missed. Highly recommended: stay overnight as the auberge accepts one group per night.',
-          hours: 'Dinner every day · Book via 29ventinove.com',
-          bookUrl: 'https://29ventinove.com',
-          bookLabel: 'Book at 29ventinove.com'
-        }
-      ]
-    },
-    /* ── DAY 2 ── */
-    {
-      date: '2026-11-02',
-      dayNum: 2,
-      weekday: 'Monday 2 November',
-      title: 'Nikkō to Sendai',
-      city: 'Tochigi & Miyagi',
-      region: 'Nikkō · Sendai',
-      hotel: 'Sendai — Hotel Metropolitan or Westin',
-      hq: 'Hotel Metropolitan Sendai',
-      coords: { lat:38.27, lon:140.87 },
-      notes: 'A morning at Nikkō Tōshōgū at the absolute peak of kōyō season, then the Tōhoku Expressway north to Sendai for two refined meals.',
-      stops: [
-        {
-          time: '09:00',
-          title: 'Nikkō Tōshōgū',
-          titleJp: '日光東照宮',
-          subtitle: '2301 Sannai, Nikkō, Tochigi',
-          type: 'sight',
-          badge: 'Morning',
-          badgeType: 'sight',
-          awards: ['UNESCO World Heritage', 'Rating 4.5 · 33,000+ reviews'],
-          locationName: 'Nikkō Tōshōgū',
-          address: '2301 Sannai, Nikko, Tochigi',
-          mapsQuery: 'Nikko Toshogu Shrine',
-          notes: 'Depart Kawaba at 8:30 and arrive at Nikkō in one hour — perfectly timed for the 9:00 opening. November is the absolute peak of kōyō (紅葉) season here: the ancient cedar avenues, five-storey pagodas, and vermillion shrine gates are framed in blazing crimson and gold. Allow ninety minutes to two hours.',
-          hours: 'Daily 09:00–16:00 · Admission ¥1,300',
-          bookUrl: 'https://www.toshogu.jp/',
-          bookLabel: 'toshogu.jp'
-        },
-        {
-          time: 'drive',
-          isDrive: true,
-          notes: '2.5 hours via Nikkō IC → Tōhoku Expressway → Sendai'
-        },
-        {
-          time: '11:30',
-          title: 'IL PIZZAIOLO',
-          titleJp: 'イル・ピッツァイオーロ',
-          subtitle: '1-9-21 Tsutsumimachi, Aoba Ward, Sendai',
-          type: 'restaurant',
-          badge: 'Lunch',
-          badgeType: 'lunch',
-          awards: ['Tabelog Bronze'],
-          locationName: 'IL PIZZAIOLO',
-          address: '1-9-21 Tsutsumimachi, Aoba Ward, Sendai',
-          mapsQuery: 'IL PIZZAIOLO Sendai Tsutsumimachi',
-          notes: 'A small wood-fired counter in central Sendai serving what many consider the finest Neapolitan pizza in the Tōhoku region. The dough ferments for 48 hours and the staff will guide you through sake and natural wine pairings. Arrive by 13:00 for a relaxed lunch.',
-          hours: 'Mon, Fri–Sun · Lunch 11:30–15:00 · Dinner 18:00–22:00 · Closed Tue–Thu'
-        },
-        {
-          time: '18:00',
-          title: 'Keisuke Matsumoto',
-          titleJp: '松本圭介',
-          subtitle: '2-3-17 Kashiwagi, Aoba Ward, Sendai',
-          type: 'restaurant',
-          badge: 'Dinner',
-          badgeType: 'dinner',
-          locationName: 'Keisuke Matsumoto',
-          address: '2-3-17 Kashiwagi, Aoba Ward, Sendai',
-          mapsQuery: 'Keisuke Matsumoto Sendai Kashiwagi',
-          notes: 'Five counter seats. That is all. Chef Matsumoto\u2019s philosophy — Japanese spirit harmonised with classical Western technique — produces dishes of extraordinary precision: white asparagus wrapped in Sendai Wagyu with spring truffle, Hidakami beef with a Shaoxing wine reduction, local shellfish in dashi beurre blanc. One of Sendai\u2019s most coveted tables.',
-          hours: 'Daily 18:00–23:00 · Dinner only',
-          bookUrl: 'https://mattunipt.shopinfo.jp/',
-          bookLabel: 'Reserve via Tablecheck'
-        }
-      ]
-    },
-    /* ── DAY 3 ── */
-    {
-      date: '2026-11-03',
-      dayNum: 3,
-      weekday: 'Tuesday 3 November',
-      title: 'The Auberge',
-      city: 'Yamagata',
-      region: 'Akayu Onsen, Nanyō',
-      hotel: 'Osteria Sincerita, Akayu',
-      hq: 'Osteria Sincerita Akayu',
-      coords: { lat:38.05, lon:140.17 },
-      notes: 'A gentle Culture Day. One hour from Sendai to Akayu Onsen — one of Yamagata\u2019s oldest hot spring towns. Check in early, explore the historic bathhouses along the Matsukawa river, and rest before the evening.',
-      stops: [
-        {
-          time: '18:00',
-          title: 'Stanza della SINCERITA',
-          titleJp: 'オステリア シンチェリータ',
-          subtitle: '3005 Akayu, Nanyō, Yamagata',
-          type: 'restaurant',
-          badge: 'Dinner',
-          badgeType: 'dinner',
-          awards: ['Michelin Key', 'Tabelog Bronze'],
-          locationName: 'Osteria Sincerita',
-          address: '3005 Akayu, Nanyo, Yamagata',
-          mapsQuery: 'Osteria Sincerita Akayu Yamagata',
-          notes: 'Two rooms. One chef. Chef Makoto Harada built this intimate auberge in the heart of the Akayu Onsen district to express a single idea: Yamagata\u2019s seasons on a plate, cooked over wood fire in an Italian language. Yonezawa beef, mountain vegetables, housemade pasta, local sake — the evening meal is unhurried and deeply personal. Pricing: overnight with two meals from ¥77,000–¥110,000 per person; dinner only ¥33,000.',
-          hours: 'Check website — advance booking essential',
-          bookUrl: 'https://osteria-sincerita.com/',
-          bookLabel: 'Book at osteria-sincerita.com'
-        }
-      ]
-    },
-    /* ── DAY 4 ── */
-    {
-      date: '2026-11-04',
-      dayNum: 4,
-      weekday: 'Wednesday 4 November',
-      title: 'Mountain to Rice Paddy',
-      city: 'Yamagata → Niigata',
-      region: 'Nishikawa → Sanjō',
-      hotel: 'Sanjō or Niigata city',
-      hq: 'Sanjo Niigata',
-      coords: { lat:37.63, lon:138.99 },
-      notes: 'The most ambitious day of the trip. Lunch at the foot of sacred Mt. Gassan, then west across the Kan-Etsu to one of Japan\u2019s most quietly significant restaurants.',
-      stops: [
-        {
-          time: '11:30',
-          title: 'Dewa Ya',
-          titleJp: '出羽屋',
-          subtitle: 'Mazawa 58, Nishikawa, Yamagata',
-          type: 'restaurant',
-          badge: 'Lunch',
-          badgeType: 'lunch',
-          awards: ['Tabelog Silver', 'Tabelog Chefs\u2019 Gold'],
-          locationName: 'Dewa Ya',
-          address: 'Mazawa 58, Nishikawa, Nishimurayama District, Yamagata',
-          mapsQuery: 'Dewa Ya Nishikawa Yamagata',
-          notes: 'At the foot of sacred Mt. Gassan, this legendary mountain inn has been serving the region\u2019s most extraordinary wild-foraged cuisine for generations. Chef Haruki Sato personally gathers the ingredients — mountain vegetables, wild mushrooms, bear meat, venison — and serves one group at a time in a setting of austere natural beauty. One of the hardest reservations in all of Japan.',
-          hours: 'Wed–Mon · Lunch only 11:30–14:00 · Closed Tuesday',
-          bookUrl: 'http://www.dewaya.com/',
-          bookLabel: 'dewaya.com'
-        },
-        {
-          time: 'drive',
-          isDrive: true,
-          notes: '1.5 hours via Route 112 → Kan-Etsu Expressway → Sanjō, Niigata'
-        },
-        {
-          time: '17:30',
-          title: 'Restaurant UOZEN',
-          titleJp: 'レストラン ウオゼン',
-          subtitle: '1-10-69-8 Higashiōsaki, Sanjō, Niigata',
-          type: 'restaurant',
-          badge: 'Dinner',
-          badgeType: 'dinner',
-          awards: ['OAD #180', 'Tabelog Silver'],
-          locationName: 'Restaurant UOZEN',
-          address: '1-10-69-8 Higashiosaki, Sanjo, Niigata',
-          mapsQuery: 'Restaurant UOZEN Sanjo Niigata',
-          notes: 'Chef Kazuhiro Inoue holds a hunting licence. He personally sources wild boar, deer, bear, and seasonal seafood from the Sea of Japan — then serves it as refined, inventive modern French cuisine in a converted farmhouse surrounded by rice paddies. The contrast between the pastoral setting and the precision of the cooking is part of what makes UOZEN one of Japan\u2019s most quietly significant restaurants.',
-          hours: 'Tue–Sun · Dinner 17:30–23:00 (Wed–Sat also Lunch 11:30–15:00) · Closed Monday',
-          bookUrl: 'http://uozen.jp/',
-          bookLabel: 'uozen.jp'
-        }
-      ]
-    },
-    /* ── DAY 5 ── */
-    {
-      date: '2026-11-05',
-      dayNum: 5,
-      weekday: 'Thursday 5 November',
-      title: 'Samurai Town',
-      city: 'Niigata',
-      region: 'Murakami',
-      hotel: 'Murakami or Niigata city',
-      hq: 'Murakami Niigata',
-      coords: { lat:38.22, lon:139.48 },
-      notes: 'A more contemplative day. Lunch at one of Japan\u2019s most preserved kappou houses, then an afternoon walking the samurai streets and sake breweries of Murakami.',
-      stops: [
-        {
-          time: '11:30',
-          title: 'Kappou Shintaku',
-          titleJp: '割烹 新多久',
-          subtitle: '3-38 Komachi, Murakami, Niigata',
-          type: 'restaurant',
-          badge: 'Lunch',
-          badgeType: 'lunch',
-          awards: ['OAD #369', 'Tabelog Silver'],
-          locationName: 'Kappou Shintaku',
-          address: '3-38 Komachi, Murakami, Niigata',
-          mapsQuery: 'Kappou Shintaku Murakami Niigata',
-          notes: 'Founded in 1867 and now run by brothers who trained in Kyoto\u2019s finest kaiseki houses, Shintaku draws over ninety percent of its ingredients from the Murakami region. The city\u2019s celebrated local salmon — salted and dried in the winter winds — appears in multiple forms; alongside wagyu, wild boar, and seasonal mountain vegetables. The historic dining room, with its lacquered counter and shoji screens, is itself an experience.',
-          hours: 'Mon–Tue, Thu–Sun · Lunch 11:30–14:30 · Dinner 17:00–21:30 · Closed Wednesday',
-          bookUrl: 'https://murakami-sintaku.com/',
-          bookLabel: 'murakami-sintaku.com'
-        },
-        {
-          time: '15:00',
-          title: 'Murakami Samurai District',
-          subtitle: 'Preserved samurai streets · Sake breweries · Iguchi Museum',
-          type: 'sight',
-          badge: 'Afternoon',
-          badgeType: 'sight',
-          locationName: 'Murakami historic district',
-          address: 'Murakami, Niigata',
-          mapsQuery: 'Murakami samurai district Niigata',
-          notes: 'After lunch, walk Murakami\u2019s beautifully preserved samurai streets, visit the sake breweries, and the city\u2019s renowned Masamune Iguchi Museum of Art before retiring or driving south.'
-        }
-      ]
-    },
-    /* ── DAY 6 ── */
-    {
-      date: '2026-11-06',
-      dayNum: 6,
-      weekday: 'Friday 6 November',
-      title: 'Return to Tokyo',
-      city: 'Tokyo',
-      region: 'Murakami → Tokyo',
-      hotel: null,
-      hq: null,
-      coords: { lat:35.68, lon:139.65 },
-      notes: 'The drive home — 4 to 4.5 hours via the Kan-Etsu — and a final, freely chosen lunch in the city. After six days of destination dining, Tokyo feels both familiar and electric.',
-      stops: [
-        {
-          time: 'drive',
-          isDrive: true,
-          notes: '4 – 4.5 hours via Kan-Etsu Expressway → Kanetsu JCT → Kantō Expressway → Tokyo'
-        },
-        {
-          time: '13:00',
-          title: 'Tokyo — Your Choice',
-          subtitle: 'A final lunch in the city of your choosing',
-          type: 'restaurant',
-          badge: 'Final Lunch',
-          badgeType: 'lunch',
-          locationName: 'Tokyo',
-          address: 'Tokyo',
-          mapsQuery: 'Tokyo Japan',
-          notes: 'A few fitting ways to close: For sushi — Sushi Saito (Akasaka, if you can secure it), Sushi Yoshitake (Ginza, 3 Michelin stars), or Harutaka (Ginza). For something celebratory — Den (Jingumae), one of Japan\u2019s most inventive and joyful meals. For simplicity — a bowl of cold soba at Kanda Yabu Soba, Tokyo\u2019s oldest, founded 1880.'
-        }
-      ]
-    }
-  ],
-  bookingPriority: [
-    { rank:1, name:'Dewa Ya',           where:'Nishikawa, Yamagata · One group per day · Months-long waitlist',    urgency:'high' },
-    { rank:2, name:'Kappou Shintaku',   where:'Murakami, Niigata · Limited covers · Book 3+ months ahead',         urgency:'high' },
-    { rank:3, name:'Osteria Sincerita', where:'Akayu, Yamagata · Only 2 rooms · Books out far in advance',         urgency:'high' },
-    { rank:4, name:'Sushi Obana',       where:'Tatebayashi, Gunma · Sunday lunch only · Pocket Concierge',         urgency:'high' },
-    { rank:5, name:'Restaurant UOZEN',  where:'Sanjō, Niigata · Popular destination · Book 2+ months ahead',       urgency:'med' },
-    { rank:6, name:'VENTINOVE',         where:'Kawaba, Gunma · Auberge room fills fast · Book via website',        urgency:'med' },
-    { rank:7, name:'Keisuke Matsumoto', where:'Sendai · 5 counter seats · Reserve via Tablecheck',                  urgency:'med' },
-    { rank:8, name:'IL PIZZAIOLO',      where:'Sendai · Most accessible · Reserve 1–2 months ahead',                urgency:'med' }
-  ],
-  // Full Google Maps multi-stop URL (10 waypoints from the original)
-  fullRouteUrl: 'https://www.google.com/maps/dir/36.246046,139.538042/36.6875,139.1064/36.7580878,139.5987466/38.28417,140.86992/38.271717,140.854406/38.0486386,140.1703712/38.4305219,140.1320475/37.6271956,138.9911135/38.2254657,139.4772008/35.6762,139.6503'
-};
-
-/* ════════════════════════════════════════════════════════════════
-   IDEAS — Trip extensions and alternatives
-   ═══════════════════════════════════════════════════════════════ */
-var IDEAS = [
-  {
-    emoji: '🍣',
-    title: 'Tokiwa Sushi Shibata Honten',
-    titleJp: '登喜和鮨 新発田本店',
-    location: 'Shibata, Niigata',
-    tag: 'Trip Extension · Sat 7 Nov',
-    tagFeatured: true,
-    desc: 'OAD #194. One of the most acclaimed sushi counters outside Tokyo. The Honten location operates weekends only (Sat–Sun, lunch from 11:30). The only Sunday in the trip is committed to Sushi Obana — but Shibata sits directly on the route home from Murakami. Consider extending the trip by one day to add a Saturday, November 7 lunch here.',
-    mapsQuery: 'Tokiwa Sushi Shibata Honten Niigata'
-  },
-  {
-    emoji: '♨️',
-    title: 'Nyūtō Onsen — Tsurunoyu',
-    titleJp: '乳頭温泉 鶴の湯',
-    location: 'Akita',
-    tag: 'Onsen Extension',
-    desc: 'If extending north of Sendai, Tsurunoyu — the oldest of the Nyūtō Onsen group — offers a milky-blue rotenburo and thatched-roof Edo-era buildings. The detour adds half a day from Sendai but is one of the few onsen experiences on the level of the food on this trip.',
-    mapsQuery: 'Tsurunoyu Onsen Nyuto Akita'
-  },
-  {
-    emoji: '🍶',
-    title: 'Tsuchida Sake Brewery Tour',
-    titleJp: '土田酒造',
-    location: 'Kawaba, Gunma',
-    tag: 'Day 1 Add-on',
-    desc: 'VENTINOVE sits on the grounds of Tsuchida Sake Brewery. A daytime brewery tour before the dinner is an elegant way to deepen Day 1 — the brewery produces yamahai-style junmai sake using local Gunma rice and the same wild yeasts the kitchen uses in its dishes.',
-    mapsQuery: 'Tsuchida Shuzo Kawaba Gunma'
-  },
-  {
-    emoji: '🎋',
-    title: 'Yamadera (Risshaku-ji)',
-    titleJp: '山寺 立石寺',
-    location: 'Yamagata',
-    tag: 'En Route Sight',
-    desc: 'Mountain temple complex carved into a cliff face — 1,000+ stone steps to the summit, one of the most iconic landscapes in northeastern Japan. A natural morning stop on Day 4 if leaving Akayu before lunch in Nishikawa.',
-    mapsQuery: 'Yamadera Risshakuji Yamagata'
-  }
-];
-
-/* ════════════════════════════════════════════════════════════════
-   WEATHER — Open-Meteo (no API key required)
-   For a different provider, replace fetchWeather() and update the
-   widget rendering to match the new response shape.
-   ═══════════════════════════════════════════════════════════════ */
-function wmoIcon(code) {
-  if (code === 0)               return { i:'☀️', d:'Clear sky' };
-  if (code <= 2)                return { i:'⛅',  d:'Partly cloudy' };
-  if (code === 3)               return { i:'☁️', d:'Overcast' };
-  if (code >= 45 && code <= 48) return { i:'🌫️', d:'Foggy' };
-  if (code >= 51 && code <= 67) return { i:'🌧️', d:'Rain' };
-  if (code >= 71 && code <= 77) return { i:'❄️', d:'Snow' };
-  if (code >= 80 && code <= 82) return { i:'🌦️', d:'Showers' };
-  if (code >= 95)               return { i:'⛈️', d:'Thunderstorm' };
-  return { i:'🌤️', d:'Mixed' };
-}
-
-function loadWeather() {
-  TRIP.days.forEach(function(day) {
-    if (!day.coords) return;
-    var url = 'https://api.open-meteo.com/v1/forecast'
-      + '?latitude='  + day.coords.lat
-      + '&longitude=' + day.coords.lon
-      + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode'
-      + '&timezone=Asia%2FTokyo'
-      + '&start_date=' + day.date + '&end_date=' + day.date;
-    fetch(url)
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        var el = document.getElementById('wx-' + day.date);
-        if (!el || !data.daily || !data.daily.time || !data.daily.time.length) return;
-        var max  = Math.round(data.daily.temperature_2m_max[0]);
-        var min  = Math.round(data.daily.temperature_2m_min[0]);
-        var rain = data.daily.precipitation_probability_max[0] || 0;
-        var code = data.daily.weathercode[0];
-        var ic   = wmoIcon(code);
-        el.innerHTML =
-            '<span class="wx-icon">'+ic.i+'</span>'
-          + '<div class="wx-info">'
-          +   '<div class="wx-temp">'+max+'° / '+min+'°C · '+ic.d+'</div>'
-          +   '<div class="wx-desc">'+esc(day.region)+'</div>'
-          + '</div>'
-          + '<div class="wx-rain">💧 '+rain+'%</div>';
-      })
-      .catch(function(){
-        // Fallback already rendered — fail silently
+  (function () {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-  });
-}
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
 
-function setWxFallback(el, day) {
-  el.innerHTML =
-      '<span class="wx-icon">🍂</span>'
-    + '<div class="wx-info">'
-    +   '<div class="wx-temp" style="font-size:13px">November in Japan · Peak kōyō</div>'
-    +   '<div class="wx-desc">'+esc(day.region)+' · Weather loads with internet</div>'
-    + '</div>';
-}
-
-/* ════════════════════════════════════════════════════════════════
-   MAPS HELPERS
-   ═══════════════════════════════════════════════════════════════ */
-function gm(query) {
-  if (!query) return '#';
-  if (query.indexOf('http') === 0) return query;
-  return 'https://maps.google.com/?q=' + encodeURIComponent(query);
-}
-function gmNav(query) {
-  if (!query) return '#';
-  if (query.indexOf('http') === 0) return query;
-  return 'https://maps.google.com/maps?daddr=' + encodeURIComponent(query) + '&dirflg=d';
-}
-
-/* ════════════════════════════════════════════════════════════════
-   CLIPBOARD + TOAST
-   ═══════════════════════════════════════════════════════════════ */
-var toastTimer;
-function toast(msg) {
-  var el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2200);
-}
-
-window.copyAddr = function(dayIdx, stopIdx) {
-  var stop = TRIP.days[dayIdx].stops[stopIdx];
-  var txt = stop.address || stop.locationName || stop.title;
-  if (!txt) return;
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(txt).then(function(){ toast('Address copied'); });
-  } else {
-    var ta = document.createElement('textarea');
-    ta.value = txt; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); toast('Address copied'); } catch(e){}
-    document.body.removeChild(ta);
-  }
-};
-
-window.copyText = function(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(function(){ toast('Copied'); });
-  }
-};
-
-/* ════════════════════════════════════════════════════════════════
-   CLOCK + CURRENT DAY
-   ═══════════════════════════════════════════════════════════════ */
-function jstNow() { return new Date(Date.now() + 9*3600*1000); }
-function isoToday() { return jstNow().toISOString().slice(0,10); }
-
-function tickClock() {
-  var d = jstNow();
-  var hh = String(d.getUTCHours()).padStart(2,'0');
-  var mm = String(d.getUTCMinutes()).padStart(2,'0');
-  var clockEl = document.getElementById('jst-clock');
-  if (clockEl) clockEl.textContent = hh + ':' + mm;
-
-  var today = isoToday();
-  var labelEl = document.getElementById('trip-day-label');
-  if (!labelEl) return;
-  var found = null;
-  for (var i = 0; i < TRIP.days.length; i++) {
-    if (TRIP.days[i].date === today) { found = TRIP.days[i]; break; }
-  }
-  if (found) {
-    labelEl.textContent = 'Day ' + found.dayNum + ' of ' + TRIP.days.length;
-    labelEl.classList.add('is-today');
-  } else if (today < TRIP.startDate) {
-    labelEl.textContent = 'Trip begins 1 Nov 2026';
-    labelEl.classList.remove('is-today');
-  } else if (today > TRIP.endDate) {
-    labelEl.textContent = 'Trip complete · Sayōnara';
-    labelEl.classList.remove('is-today');
-  } else {
-    labelEl.textContent = 'Japan Standard Time';
-    labelEl.classList.remove('is-today');
-  }
-}
-
-/* ════════════════════════════════════════════════════════════════
-   TABS
-   ═══════════════════════════════════════════════════════════════ */
-document.querySelector('.tab-nav').addEventListener('click', function(e) {
-  var btn = e.target.closest('.tab-btn');
-  if (!btn) return;
-  var name = btn.getAttribute('data-tab');
-  document.querySelectorAll('.tab-btn').forEach(function(b) {
-    b.classList.toggle('active', b.getAttribute('data-tab') === name);
-  });
-  document.querySelectorAll('.tab-panel').forEach(function(p) {
-    p.classList.toggle('active', p.id === 'tab-' + name);
-  });
-  // Scroll panel into view but keep header sticky
-  var hdr = document.querySelector('.app-header');
-  var top = hdr ? hdr.getBoundingClientRect().bottom : 0;
-  if (top > 0 && top < window.innerHeight) {
-    // already scrolled past hero — fine
-  } else {
-    document.querySelector('.app-header').scrollIntoView({ behavior:'smooth' });
-  }
-});
-
-window.toggleDay = function(num) {
-  var card = document.getElementById('day-' + num);
-  if (card) card.classList.toggle('open');
-};
-
-/* ════════════════════════════════════════════════════════════════
-   ESCAPE
-   ═══════════════════════════════════════════════════════════════ */
-function esc(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
-}
-function escAllowEm(s) {
-  // Allow <em> for italic styling within trusted strings
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g,'&amp;')
-    .replace(/<(?!\/?em\b)/g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RENDER — STOP
-   ═══════════════════════════════════════════════════════════════ */
-function renderStop(stop, dayIdx, stopIdx) {
-  if (stop.isDrive) {
-    return '<div class="drive-note">'+esc(stop.notes)+'</div>';
-  }
-
-  var awardsHtml = '';
-  if (stop.awards && stop.awards.length) {
-    awardsHtml = '<div class="stop-awards">'
-      + stop.awards.map(function(a){ return '<span class="award">'+esc(a)+'</span>'; }).join('')
-      + '</div>';
-  }
-
-  var bookHtml = '';
-  if (stop.bookUrl) {
-    bookHtml = '<a class="stop-book" href="'+esc(stop.bookUrl)+'" target="_blank" rel="noopener">'
-      + esc(stop.bookLabel || 'Book')+' →</a>';
-  }
-
-  var hoursHtml = stop.hours ? '<div class="stop-hours">'+esc(stop.hours)+'</div>' : '';
-
-  var badgeHtml = stop.badge
-    ? '<span class="stop-badge b-'+(stop.badgeType||'info')+'">'+esc(stop.badge)+'</span>'
-    : '';
-
-  var jpHtml = stop.titleJp
-    ? '<span class="stop-title-jp">'+esc(stop.titleJp)+'</span>'
-    : '';
-
-  var mapsHtml =
-      '<a href="'+esc(gm(stop.mapsQuery))+'" target="_blank" rel="noopener" class="map-btn primary">📍 Maps</a>'
-    + '<a href="'+esc(gmNav(stop.mapsQuery))+'" target="_blank" rel="noopener" class="map-btn">🧭 Navigate</a>'
-    + '<button class="map-btn" onclick="copyAddr('+dayIdx+','+stopIdx+')">⎘ Copy</button>';
-
-  return ''
-    + '<div class="stop-item">'
-    +   '<div class="stop-time">'+esc(stop.time||'')+'</div>'
-    +   '<div class="stop-dot t-'+(stop.type||'restaurant')+'"></div>'
-    +   '<div class="stop-card">'
-    +     '<div class="stop-top">'
-    +       '<div class="stop-title-wrap">'
-    +         '<div class="stop-title">'+esc(stop.title)+'</div>'
-    +         jpHtml
-    +         (stop.subtitle ? '<div class="stop-subtitle">'+esc(stop.subtitle)+'</div>' : '')
-    +       '</div>'
-    +       badgeHtml
-    +     '</div>'
-    +     awardsHtml
-    +     (stop.notes ? '<div class="stop-notes">'+escAllowEm(stop.notes)+'</div>' : '')
-    +     hoursHtml
-    +     bookHtml
-    +     '<div class="map-actions">'+mapsHtml+'</div>'
-    +   '</div>'
-    + '</div>';
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RENDER — ITINERARY
-   ═══════════════════════════════════════════════════════════════ */
-function renderItinerary() {
-  var today = isoToday();
-  var html = '';
-
-  html += '<div class="section-label">Daily Itinerary</div>';
-
-  TRIP.days.forEach(function(day, idx) {
-    var isToday = day.date === today;
-    var isPast  = day.date < today;
-    var isOpen  = isToday || (today < TRIP.startDate && idx === 0);
-    var diningCount = day.stops.filter(function(s){
-      return !s.isDrive && (s.type === 'restaurant');
-    }).length;
-
-    html += '<div class="day-card'
-      + (isToday ? ' is-today' : '')
-      + (isPast  ? ' is-past'  : '')
-      + (isOpen  ? ' open'     : '')
-      + '" id="day-'+day.dayNum+'" style="animation-delay:'+(idx*0.04).toFixed(2)+'s">'
-      + '<div class="day-header" onclick="toggleDay('+day.dayNum+')">'
-      +   '<div class="day-num">'+day.dayNum+'</div>'
-      +   '<div class="day-header-info">'
-      +     '<div class="day-name">'+esc(day.weekday.split(' ').slice(1).join(' '))+' · <em>'+esc(day.title)+'</em></div>'
-      +     '<div class="day-sub">'
-      +       '<span class="day-pref-badge">'+esc(day.city)+'</span>'
-      +       '<span>'+esc(day.region)+'</span>'
-      +       (isToday ? '<span class="today-pill">TODAY</span>' : '')
-      +       (diningCount ? '<span>· '+diningCount+' dining</span>' : '')
-      +     '</div>'
-      +   '</div>'
-      +   '<span class="day-chevron">▾</span>'
-      + '</div>'
-      + '<div class="day-body"><div class="day-body-inner">';
-
-    if (day.hotel) {
-      html += '<div class="hotel-bar">'
-        + '<span class="hb-icon">🏨</span>'
-        + '<div class="hb-info">'
-        +   '<div class="hb-label">Overnight</div>'
-        +   '<div class="hb-name">'+esc(day.hotel)+'</div>'
-        + '</div>'
-        + '<a class="hb-link" href="'+esc(gm(day.hq))+'" target="_blank" rel="noopener">Map</a>'
-        + '</div>';
-    }
-
-    if (day.notes) {
-      html += '<div class="day-note-bar">'+esc(day.notes)+'</div>';
-    }
-
-    html += '<div class="weather-widget" id="wx-'+day.date+'">'
-      + '<span class="wx-loading">Loading weather…</span>'
-      + '</div>';
-
-    html += '<div class="timeline">';
-    day.stops.forEach(function(stop, si){ html += renderStop(stop, idx, si); });
-    html += '</div>';
-
-    html += '</div></div></div>';
-  });
-
-  // Booking priority block (kept from original Brown design)
-  html += '<div class="booking-block">'
-    + '<div class="section-label">Reservations</div>'
-    + '<h3 class="booking-title">Booking Priority<br><em>Begin immediately</em></h3>'
-    + '<div class="booking-sub">' + TRIP.bookingPriority.length + ' restaurants · in order of urgency</div>'
-    + '<ul class="booking-list">';
-  TRIP.bookingPriority.forEach(function(b) {
-    html += '<li class="booking-item">'
-      + '<span class="booking-rank">'+b.rank+'</span>'
-      + '<div class="booking-name">'+esc(b.name)+'<span>'+esc(b.where)+'</span></div>'
-      + '<span class="booking-urgency '+(b.urgency==='high'?'urgency-high':'urgency-med')+'">'
-      +   (b.urgency==='high' ? 'Urgent' : 'Soon')
-      + '</span>'
-      + '</li>';
-  });
-  html += '</ul></div>';
-
-  // Full Google Maps route button
-  html += '<div class="route-btn-wrap">'
-    + '<a class="route-btn" href="'+esc(TRIP.fullRouteUrl)+'" target="_blank" rel="noopener">'
-    + '🗺  Open Full Route in Google Maps</a>'
-    + '<div style="font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:0.04em">All 10 stops as a driving route</div>'
-    + '</div>';
-
-  document.getElementById('tab-itinerary').innerHTML = html;
-
-  // Set fallbacks first, then try fetching
-  TRIP.days.forEach(function(day) {
-    var el = document.getElementById('wx-' + day.date);
-    if (el) setWxFallback(el, day);
-  });
-  try { loadWeather(); } catch(e) {}
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RENDER — IDEAS
-   ═══════════════════════════════════════════════════════════════ */
-function renderIdeas() {
-  var html = ''
-    + '<div class="ideas-banner">'
-    +   '<h2>Ideas &amp; <em>Possibilities</em></h2>'
-    +   '<p>Extensions and alternatives we are exploring</p>'
-    + '</div>'
-    + '<div class="ideas-notice">'
-    +   '<strong>A note from Happy Camper</strong>'
-    +   'These additions sit outside the original itinerary scope. We are happy to arrange them — '
-    +   'they would simply be treated as extras and any direct costs (additional restaurant bookings, '
-    +   'extended driver days, hotel changes) would be billed separately from the main programme.'
-    + '</div>'
-    + '<div class="section-label">Under Consideration</div>';
-
-  IDEAS.forEach(function(idea) {
-    html += '<div class="idea-card">'
-      + '<div class="idea-card-head">'
-      +   '<div class="idea-emoji">'+idea.emoji+'</div>'
-      +   '<div class="idea-info">'
-      +     '<div class="idea-title">'+esc(idea.title)+'</div>'
-      +     (idea.titleJp ? '<div class="stop-title-jp">'+esc(idea.titleJp)+'</div>' : '')
-      +     '<div class="idea-meta">'
-      +       '<span class="idea-tag">'+esc(idea.location)+'</span>'
-      +       '<span class="idea-tag'+(idea.tagFeatured?' featured':'')+'">'+esc(idea.tag)+'</span>'
-      +     '</div>'
-      +   '</div>'
-      + '</div>'
-      + '<div class="idea-desc">'+esc(idea.desc)+'</div>'
-      + '<div class="map-actions">'
-      +   '<a class="map-btn primary" href="'+esc(gm(idea.mapsQuery))+'" target="_blank" rel="noopener">📍 Maps</a>'
-      +   '<a class="map-btn" href="'+esc(gmNav(idea.mapsQuery))+'" target="_blank" rel="noopener">🧭 Navigate</a>'
-      + '</div>'
-      + '</div>';
-  });
-
-  document.getElementById('tab-ideas').innerHTML = html;
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RENDER — UTILITIES
-   ═══════════════════════════════════════════════════════════════ */
-function renderUtilities() {
-  var hotelsHtml = TRIP.hotels.map(function(h){
-    return '<div class="hotel-row">'
-      + '<div style="font-size:18px;color:var(--gold)">🏨</div>'
-      + '<div class="hotel-row-info">'
-      +   '<div class="hotel-row-name">'+esc(h.name)+'</div>'
-      +   '<div class="hotel-row-detail">'+esc(h.nights)+'</div>'
-      + '</div>'
-      + '<a class="hotel-row-link" href="'+esc(gm(h.q))+'" target="_blank" rel="noopener">Map</a>'
-      + '</div>';
-  }).join('');
-
-  document.getElementById('tab-utilities').innerHTML = ''
-
-    /* Currency */
-    + '<div class="section-label">Currency</div>'
-    + '<div class="util-card">'
-    +   '<div class="util-card-title">JPY ⇆ <em>USD</em></div>'
-    +   '<div class="fx-row">'
-    +     '<div class="fx-group">'
-    +       '<div class="fx-label">🇯🇵 Japanese Yen</div>'
-    +       '<input class="fx-input" id="fx-jpy" type="number" inputmode="numeric" value="10000">'
-    +     '</div>'
-    +     '<button class="fx-swap-btn" id="fx-swap" aria-label="Swap">⇆</button>'
-    +     '<div class="fx-group">'
-    +       '<div class="fx-label">🇺🇸 US Dollar</div>'
-    +       '<input class="fx-input" id="fx-usd" type="number" inputmode="decimal">'
-    +     '</div>'
-    +   '</div>'
-    +   '<div class="fx-rate-note">Rate: 1 USD = '+FX_RATE+' JPY (indicative) · Update <code>FX_RATE</code> in the script</div>'
-    + '</div>'
-
-    /* Hotels at a Glance */
-    + '<div class="section-label">Hotels &amp; Stops</div>'
-    + '<div class="util-card">' + hotelsHtml + '</div>'
-
-    /* Driving Notes */
-    + '<div class="section-label">Driving in Tōhoku</div>'
-    + '<div class="util-card"><ul class="info-list">'
-    +   '<li><span class="info-emoji">🚗</span><div class="info-text"><strong>~950 km total over 6 days</strong>Mostly expressway. Daily driving is moderate — never rushed.</div></li>'
-    +   '<li><span class="info-emoji">⛽</span><div class="info-text"><strong>ETC card</strong>Fitted in the rental — toll lanes only. Keep the receipt for reconciliation.</div></li>'
-    +   '<li><span class="info-emoji">🍂</span><div class="info-text"><strong>Kōyō traffic</strong>Nikkō and Yamadera draw crowds in early November. Aim for 09:00 arrivals to beat the buses.</div></li>'
-    +   '<li><span class="info-emoji">🅿️</span><div class="info-text"><strong>Restaurant parking</strong>VENTINOVE, Dewa Ya, and Sincerita have on-site parking. Sushi Obana parks one block north — staff will direct you.</div></li>'
-    + '</ul></div>'
-
-    /* Quick Reference */
-    + '<div class="section-label">Quick Reference</div>'
-    + '<div class="util-card"><ul class="info-list">'
-    +   '<li><span class="info-emoji">💴</span><div class="info-text"><strong>Cash is essential</strong>Carry 50,000–80,000 ¥ per person. ATMs at 7-Eleven and Japan Post accept foreign cards.</div></li>'
-    +   '<li><span class="info-emoji">📱</span><div class="info-text"><strong>Mobile Suica</strong>Wallet → + → Suica. Useful in Tokyo on the final day.</div></li>'
-    +   '<li><span class="info-emoji">⏰</span><div class="info-text"><strong>JST = UTC+9</strong>No daylight saving.</div></li>'
-    +   '<li><span class="info-emoji">🔌</span><div class="info-text"><strong>100V · Type A sockets</strong>European visitors should bring a voltage converter.</div></li>'
-    +   '<li><span class="info-emoji">📡</span><div class="info-text"><strong>eSIM recommended</strong>Activate before landing. Airalo, HolaFly and YO all work well across Tōhoku.</div></li>'
-    + '</ul></div>'
-
-    /* Dining Etiquette — emphasizing the no-fragrance rule */
-    + '<div class="section-label">Dining Etiquette</div>'
-    + '<div class="util-card"><ul class="info-list">'
-    +   '<li><span class="info-emoji">🚫</span><div class="info-text"><strong>No fragrance — critical</strong>No perfume, cologne, scented hair or laundry products on dining days. Sushi Obana and the omakase counters are deeply sensitive — even light fragrance disrupts the chef\u2019s work and other guests.</div></li>'
-    +   '<li><span class="info-emoji">⏰</span><div class="info-text"><strong>Punctuality</strong>Arrive on time or early. The meal begins simultaneously for all counter guests.</div></li>'
-    +   '<li><span class="info-emoji">💍</span><div class="info-text"><strong>Protect the counter</strong>Remove rings, bracelets, and watches — counters are often precious Hinoki cypress.</div></li>'
-    +   '<li><span class="info-emoji">💰</span><div class="info-text"><strong>No tipping</strong>Not customary. Say <em>Gochisousama deshita</em> — deeply appreciated.</div></li>'
-    +   '<li><span class="info-emoji">📷</span><div class="info-text"><strong>Photography</strong>Ask before photographing the chef or the counter at the higher-end rooms. Most welcome shots of the food.</div></li>'
-    + '</ul></div>';
-
-  // Currency wiring
-  var jEl = document.getElementById('fx-jpy');
-  var uEl = document.getElementById('fx-usd');
-  function fromJpy(){ var v=parseFloat(jEl.value); uEl.value = isNaN(v)?'':(v/FX_RATE).toFixed(2); }
-  function fromUsd(){ var v=parseFloat(uEl.value); jEl.value = isNaN(v)?'':String(Math.round(v*FX_RATE)); }
-  jEl.addEventListener('input', fromJpy);
-  uEl.addEventListener('input', fromUsd);
-  document.getElementById('fx-swap').addEventListener('click', function(){
-    var t = jEl.value;
-    jEl.value = uEl.value ? String(Math.round(parseFloat(uEl.value)*FX_RATE)) : '';
-    uEl.value = t ? (parseFloat(t)/FX_RATE).toFixed(2) : '';
-  });
-  fromJpy();
-}
-
-/* ════════════════════════════════════════════════════════════════
-   RENDER — EMERGENCY
-   ═══════════════════════════════════════════════════════════════ */
-function renderEmergency() {
-  document.getElementById('tab-emergency').innerHTML = ''
-    + '<div class="emergency-banner">'
-    +   '<h2>Emergency &amp; Contacts</h2>'
-    +   '<p>Japan has excellent emergency services. Save these numbers.</p>'
-    + '</div>'
-
-    /* Emergency numbers */
-    + '<div class="section-label">Emergency Numbers</div>'
-    + '<div class="contact-card">'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-r">🚨</div>'
-    +       '<div><div class="contact-label">Police</div><div class="contact-sub">All police emergencies</div></div>'
-    +     '</div>'
-    +     '<a href="tel:110" class="call-btn cr">📞 110</a>'
-    +   '</div>'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-r">🚒</div>'
-    +       '<div><div class="contact-label">Ambulance &amp; Fire</div><div class="contact-sub">Medical emergencies</div></div>'
-    +     '</div>'
-    +     '<a href="tel:119" class="call-btn cr">📞 119</a>'
-    +   '</div>'
-    + '</div>'
-
-    /* Happy Camper team */
-    + '<div class="section-label">Happy Camper — Your Trip Team</div>'
-    + '<div class="contact-card">'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-n">🌿</div>'
-    +       '<div><div class="contact-label">Gerhard — Trip Lead</div><div class="contact-sub">Direct line · Japan</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+818069892107" class="call-btn cn">📞 Call</a>'
-    +   '</div>'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-n">🌸</div>'
-    +       '<div><div class="contact-label">Tomoko — Tokyo</div><div class="contact-sub">Reservations &amp; concierge support</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+819061589006" class="call-btn cn">📞 Call</a>'
-    +   '</div>'
-    + '</div>'
-
-    /* Hospitals along the route */
-    + '<div class="section-label">Hospitals on Route</div>'
-    + '<div class="contact-card">'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-b">🏥</div>'
-    +       '<div><div class="contact-label">Tatebayashi Kosei Hospital</div><div class="contact-sub">Gunma · Closest to Sushi Obana</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+81276721100" class="call-btn cb">📞 Call</a>'
-    +   '</div>'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-b">🏥</div>'
-    +       '<div><div class="contact-label">Tōhoku University Hospital</div><div class="contact-sub">Sendai · English support available</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+81227177000" class="call-btn cb">📞 Call</a>'
-    +   '</div>'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-b">🏥</div>'
-    +       '<div><div class="contact-label">Niigata University Hospital</div><div class="contact-sub">Niigata City · Major regional centre</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+81252272000" class="call-btn cb">📞 Call</a>'
-    +   '</div>'
-    + '</div>'
-
-    /* Embassy */
-    + '<div class="section-label">Embassy</div>'
-    + '<div class="contact-card">'
-    +   '<div class="contact-row">'
-    +     '<div class="contact-left">'
-    +       '<div class="contact-icon ci-g">🏛️</div>'
-    +       '<div><div class="contact-label">U.S. Embassy Tokyo</div><div class="contact-sub">1-10-5 Akasaka, Minato-ku</div></div>'
-    +     '</div>'
-    +     '<a href="tel:+81332245000" class="call-btn cg">📞 Call</a>'
-    +   '</div>'
-    + '</div>'
-
-    /* Useful Phrases */
-    + '<div class="section-label">Useful Phrases</div>'
-    + '<div class="util-card"><ul class="info-list">'
-    +   '<li><span class="info-emoji">🙏</span><div class="info-text"><strong>Arigatō gozaimasu · ありがとうございます</strong>Thank you very much</div></li>'
-    +   '<li><span class="info-emoji">😊</span><div class="info-text"><strong>Sumimasen · すみません</strong>Excuse me / Sorry — the most useful word in Japan</div></li>'
-    +   '<li><span class="info-emoji">🍽️</span><div class="info-text"><strong>Itadakimasu · いただきます</strong>Said before eating</div></li>'
-    +   '<li><span class="info-emoji">🙇</span><div class="info-text"><strong>Gochisōsama deshita · ごちそうさまでした</strong>Thank you for the meal — always say after dining</div></li>'
-    +   '<li><span class="info-emoji">🚉</span><div class="info-text"><strong>~ eki wa doko desu ka? · ～駅はどこですか？</strong>Where is ~ station?</div></li>'
-    +   '<li><span class="info-emoji">🚕</span><div class="info-text"><strong>~ made onegai shimasu · ～までお願いします</strong>To ~ please (taxi)</div></li>'
-    +   '<li><span class="info-emoji">💴</span><div class="info-text"><strong>Ikura desu ka? · いくらですか？</strong>How much is it?</div></li>'
-    +   '<li><span class="info-emoji">🆘</span><div class="info-text"><strong>Tasukete kudasai! · 助けてください！</strong>Please help me</div></li>'
-    +   '<li><span class="info-emoji">🚑</span><div class="info-text"><strong>Kyūkyūsha wo yonde kudasai · 救急車を呼んでください</strong>Please call an ambulance</div></li>'
-    + '</ul></div>';
-}
-
-/* ════════════════════════════════════════════════════════════════
-   INIT
-   ═══════════════════════════════════════════════════════════════ */
-function init() {
-  renderItinerary();
-  renderIdeas();
-  renderUtilities();
-  renderEmergency();
-  tickClock();
-  setInterval(tickClock, 1000);
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
-}
-
-}());
+    document.querySelectorAll('.reveal, .stops').forEach(function (el) { io.observe(el); });
+  })();
 </script>
-
 </body>
 </html>
