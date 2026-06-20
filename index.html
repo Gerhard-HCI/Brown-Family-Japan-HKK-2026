@@ -2,6 +2,644 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15100F">
+<title>The Browns · Hong Kong → Japan → Hawaiʻi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#15100F;-webkit-text-size-adjust:100%}
+body{background:#15100F;color:#F0E7D6;font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* ===== LANDING ===== */
+#landing{
+  position:relative;min-height:100vh;min-height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:64px 24px;background:#15100F;
+}
+#landing .glyph{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-48%);
+  font-family:'Shippori Mincho',serif;font-weight:700;
+  font-size:min(58vw,440px);line-height:1;color:#1E1714;z-index:0;
+  user-select:none;pointer-events:none;
+}
+.cover{position:relative;z-index:1;max-width:680px;width:100%}
+.cover__eyebrow{
+  font-family:'Jost',sans-serif;font-size:11.5px;font-weight:400;letter-spacing:5px;
+  text-transform:uppercase;color:#C5A35A;margin-bottom:26px;
+}
+.cover__title{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(48px,12vw,92px);line-height:1;letter-spacing:1px;color:#F4ECDB;
+}
+.cover__arc{
+  font-family:'Shippori Mincho',serif;font-size:clamp(15px,3.6vw,21px);
+  letter-spacing:3px;color:#DBB76A;margin-top:20px;
+}
+.cover__dates{
+  font-family:'Jost',sans-serif;font-size:12.5px;font-weight:300;letter-spacing:2.5px;
+  text-transform:uppercase;color:#9C8E76;margin-top:12px;
+}
+.cover__rule{width:1px;height:48px;background:linear-gradient(#C5A35A,transparent);margin:30px auto}
+.cover__lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:#C9BBA0;margin-bottom:34px}
+
+.choices{display:grid;gap:16px;max-width:520px;margin:0 auto}
+@media(min-width:560px){.choices{grid-template-columns:1fr 1fr}}
+.choice{
+  position:relative;cursor:pointer;text-align:left;
+  background:rgba(255,255,255,0.016);
+  border:1px solid rgba(197,163,90,0.28);border-radius:5px;
+  padding:24px 22px 20px;color:inherit;
+  transition:border-color .25s ease,background .25s ease,transform .25s ease;
+}
+.choice:hover,.choice:focus-visible{border-color:#C5A35A;background:rgba(197,163,90,0.07);transform:translateY(-2px);outline:none}
+.choice__cn{display:block;font-family:'Shippori Mincho',serif;font-size:30px;color:#C5A35A;line-height:1}
+.choice__en{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:#F2E9D7;margin-top:8px;letter-spacing:.4px}
+.choice__meta{display:block;font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.4px;color:#9C8E76;margin-top:8px;line-height:1.5}
+.choice__go{display:inline-block;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#DBB76A;margin-top:16px}
+.cover__foot{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#6E6356;margin-top:34px}
+
+/* ===== VIEWER (holds a leg) ===== */
+#viewer{position:fixed;inset:0;z-index:20;display:none;flex-direction:column;background:#15100F}
+#viewer.show{display:flex}
+#viewer-bar{
+  flex:0 0 auto;height:48px;display:flex;align-items:center;gap:12px;
+  padding:0 6px 0 10px;background:#15100F;border-bottom:1px solid rgba(197,163,90,0.28);
+}
+#backbtn{
+  display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  background:none;border:none;color:#DBB76A;
+  font-family:'Jost',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:1.5px;
+  text-transform:uppercase;padding:10px 10px;border-radius:4px;
+}
+#backbtn:hover{color:#F2E9D7}
+#viewer-title{
+  flex:1;text-align:center;font-family:'Shippori Mincho',serif;font-size:14px;
+  color:#BEAF93;letter-spacing:1.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+#viewer-spacer{width:96px;flex:0 0 auto}
+#frame-host{flex:1 1 auto;position:relative}
+.legframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:#15100F}
+.legframe.show{display:block}
+
+@media (prefers-reduced-motion:reduce){.choice{transition:none}}
+:focus-visible{outline:2px solid #DBB76A;outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<!-- ===== LANDING COVER ===== -->
+<div id="landing">
+  <div class="glyph">旅</div>
+  <div class="cover">
+    <div class="cover__eyebrow">A Happy Camper Journey</div>
+    <h1 class="cover__title">The Browns</h1>
+    <div class="cover__arc">香港 · 日本 · ハワイ</div>
+    <div class="cover__dates">19 October – 6 November 2026</div>
+    <div class="cover__rule"></div>
+    <p class="cover__lead">Two chapters, one passage east. Choose where to begin.</p>
+    <div class="choices">
+      <button class="choice" data-leg="hk">
+        <span class="choice__cn">香港</span>
+        <span class="choice__en">Hong Kong</span>
+        <span class="choice__meta">19 – 22 October · three hosted days</span>
+        <span class="choice__go">Enter →</span>
+      </button>
+      <button class="choice" data-leg="jp">
+        <span class="choice__cn">日本</span>
+        <span class="choice__en">Japan</span>
+        <span class="choice__meta">30 Oct – 6 Nov · an autumn passage north</span>
+        <span class="choice__go">Enter →</span>
+      </button>
+    </div>
+    <div class="cover__foot">— and onward to Hawaiʻi —</div>
+  </div>
+</div>
+
+<!-- ===== VIEWER ===== -->
+<div id="viewer">
+  <div id="viewer-bar">
+    <button id="backbtn" aria-label="Back to journeys">‹ Journeys</button>
+    <div id="viewer-title"></div>
+    <div id="viewer-spacer"></div>
+  </div>
+  <div id="frame-host"></div>
+</div>
+
+<!-- ===== LEG DOCUMENTS (inert templates) ===== -->
+<script type="text/html" id="doc-hk">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Browns in Hong Kong · 19–22 October 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lacquer:#15100F;
+    --lacquer-2:#1E1715;
+    --gold:#C5A35A;
+    --gold-soft:#D8BE86;
+    --paper:#EDE4D3;
+    --paper-dim:#A99A82;
+    --line:rgba(197,163,90,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background-color:#15100F;-webkit-text-size-adjust:100%}
+  body{
+    background-color:#15100F;
+    color:#EDE4D3;
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    letter-spacing:.01em;
+    overflow-x:hidden;
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    height:54px;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    background-color:rgba(21,16,15,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(197,163,90,.28);
+  }
+  .tab{
+    appearance:none;border:0;background:transparent;cursor:pointer;
+    color:#A99A82;
+    font-family:'Jost',sans-serif;font-weight:400;
+    font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+    padding:8px 12px;border-radius:2px;
+    transition:color .25s ease;
+  }
+  .tab:hover{color:#EDE4D3}
+  .tab.active{color:#C5A35A}
+  .tab.active::after{
+    content:"";display:block;height:1px;margin-top:5px;
+    background:#C5A35A;
+  }
+
+  /* ---------- panels ---------- */
+  .panel{display:none;background-color:#15100F}
+  .panel.active{display:block;animation:fade .5s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    min-height:calc(100vh - 54px);
+    min-height:calc(100svh - 54px);
+    background-color:#15100F;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:40px 24px 64px;
+  }
+  .hero .glyph{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-46%);
+    font-family:'Shippori Mincho',serif;
+    font-size:min(64vw,460px);line-height:1;
+    color:#1E1715;
+    z-index:0;user-select:none;pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:1}
+  .eyebrow{
+    font-size:11px;letter-spacing:.42em;text-transform:uppercase;
+    color:#C5A35A;margin-bottom:22px;
+  }
+  .hero h1{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(38px,9vw,76px);line-height:1.04;
+    color:#EDE4D3;margin-bottom:6px;
+  }
+  .hero h1 em{font-style:italic;color:#D8BE86}
+  .hero .dates{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(15px,3.4vw,19px);letter-spacing:.16em;
+    color:#A99A82;margin-top:18px;
+  }
+  .hero .rule{width:54px;height:1px;background:#C5A35A;margin:26px auto}
+  .hero .blurb{
+    max-width:430px;margin:0 auto;color:#A99A82;
+    font-size:14.5px;
+  }
+  .scrollcue{
+    position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#A99A82;
+    z-index:1;
+  }
+
+  /* ---------- section headers ---------- */
+  .sec-head{text-align:center;padding:64px 24px 30px}
+  .sec-head .kanji{
+    font-family:'Shippori Mincho',serif;font-size:24px;color:#C5A35A;
+    margin-bottom:10px;
+  }
+  .sec-head h2{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(26px,6vw,40px);color:#EDE4D3;
+  }
+  .sec-head p{color:#A99A82;font-size:13.5px;margin-top:8px}
+
+  /* ---------- day timeline ---------- */
+  .days{position:relative;padding:10px 0 30px}
+  .days::before{
+    content:"";position:absolute;left:50%;top:0;bottom:80px;width:1px;
+    background:linear-gradient(#C5A35A,rgba(197,163,90,0));
+    transform:translateX(-50%);
+  }
+  .day{position:relative;padding:46px 0 4px;text-align:center}
+  .day .num{
+    font-family:'Shippori Mincho',serif;
+    font-size:30px;color:#C5A35A;
+    background:#15100F;display:inline-block;padding:0 14px;position:relative;z-index:1;
+  }
+  .day .date{
+    display:block;margin-top:4px;
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#A99A82;
+  }
+  .day .place{
+    display:block;margin-top:2px;
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:19px;color:#D8BE86;
+  }
+
+  .card{
+    background-color:#1E1715;
+    border:1px solid rgba(197,163,90,.18);
+    border-radius:3px;
+    text-align:left;
+    padding:20px 22px;margin:18px auto 0;max-width:560px;
+  }
+  .card .meal{
+    font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:#C5A35A;margin-bottom:7px;
+  }
+  .card h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:23px;color:#EDE4D3;line-height:1.15;
+    display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;
+  }
+  .card h3 .cn{font-family:'Shippori Mincho',serif;font-size:16px;color:#A99A82;font-weight:400}
+  .card h3 .stars{font-size:13px;letter-spacing:1px;color:#C5A35A}
+  .card p{color:#A99A82;font-size:13.5px;margin-top:9px}
+
+  .badge{
+    display:inline-block;margin-top:13px;
+    font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+    padding:4px 10px;border-radius:99px;border:1px solid;
+  }
+  .b-confirm{color:#9ED2A6;border-color:rgba(158,210,166,.5)}
+  .b-reserve{color:#E2C36A;border-color:rgba(226,195,106,.5)}
+  .b-optional{color:#C9A0C6;border-color:rgba(201,160,198,.5)}
+  .b-walkin{color:#8FB7D6;border-color:rgba(143,183,214,.5)}
+  .b-visit{color:#A99A82;border-color:rgba(169,154,130,.5)}
+
+  /* closing element */
+  .closing{
+    text-align:center;max-width:540px;margin:18px auto 0;
+    padding:26px 22px;
+    border:1px dashed rgba(197,163,90,.4);border-radius:3px;
+  }
+  .closing .meal{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:#C5A35A;margin-bottom:8px}
+  .closing h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;font-weight:500}
+  .closing p{color:#A99A82;font-size:13.5px;margin-top:9px}
+
+  /* legend */
+  .legend{
+    max-width:560px;margin:34px auto 0;padding:18px 20px;
+    border-top:1px solid rgba(197,163,90,.18);
+    display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;
+  }
+  .legend span{font-size:10.5px;letter-spacing:.12em;color:#A99A82;display:flex;align-items:center;gap:7px}
+  .legend i{width:9px;height:9px;border-radius:99px;display:inline-block}
+
+  /* ---------- discover / generic cards ---------- */
+  .grid{display:grid;gap:16px;padding:6px 0 40px}
+  .tile{
+    background-color:#1E1715;border:1px solid rgba(197,163,90,.18);
+    border-radius:3px;padding:22px 22px;
+  }
+  .tile .cn{font-family:'Shippori Mincho',serif;color:#C5A35A;font-size:16px}
+  .tile h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;color:#EDE4D3;margin-top:4px}
+  .tile p{color:#A99A82;font-size:13.5px;margin-top:8px}
+
+  /* ---------- converter ---------- */
+  .conv{
+    background-color:#1E1715;border:1px solid rgba(197,163,90,.22);
+    border-radius:4px;padding:26px 24px;max-width:520px;margin:6px auto 0;
+  }
+  .conv h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;text-align:center;margin-bottom:4px}
+  .conv .rate{text-align:center;color:#A99A82;font-size:12px;letter-spacing:.08em;margin-bottom:22px}
+  .conv .row{display:flex;align-items:center;gap:12px;margin:12px 0}
+  .conv label{width:54px;font-size:12px;letter-spacing:.16em;color:#C5A35A;text-transform:uppercase}
+  .conv input{
+    flex:1;background-color:#15100F;border:1px solid rgba(197,163,90,.3);
+    color:#EDE4D3;font-family:'Jost',sans-serif;font-size:18px;
+    padding:11px 14px;border-radius:3px;width:100%;
+  }
+  .conv input:focus{outline:none;border-color:#C5A35A}
+  .conv .swap{font-size:18px;color:#C5A35A;text-align:center}
+
+  .facts{max-width:520px;margin:30px auto 0}
+  .fact{
+    display:flex;justify-content:space-between;gap:16px;
+    padding:13px 2px;border-bottom:1px solid rgba(197,163,90,.14);
+  }
+  .fact .k{color:#C5A35A;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  .fact .v{color:#EDE4D3;font-size:13.5px;text-align:right}
+
+  /* ---------- contacts ---------- */
+  .contact{
+    background-color:#1E1715;border:1px solid rgba(197,163,90,.18);border-radius:3px;
+    padding:22px 22px;max-width:520px;margin:0 auto 16px;
+  }
+  .contact .role{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#C5A35A}
+  .contact h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;margin-top:4px}
+  .contact p{color:#A99A82;font-size:13.5px;margin-top:6px}
+  .contact a{color:#D8BE86;text-decoration:none;border-bottom:1px solid rgba(216,190,134,.4)}
+
+  /* ---------- footer ---------- */
+  .foot{
+    text-align:center;padding:50px 24px 60px;
+    border-top:1px solid rgba(197,163,90,.16);margin-top:30px;
+    background-color:#15100F;
+  }
+  .foot .mark{font-family:'Cormorant Garamond',serif;font-size:20px;color:#C5A35A;letter-spacing:.04em}
+  .foot .tag{color:#A99A82;font-size:12px;font-style:italic;margin-top:6px}
+  .foot .loc{color:#6E6356;font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:14px}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .panel.active{animation:none}
+  }
+  @media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <button class="tab active" data-p="itinerary">Itinerary</button>
+  <button class="tab" data-p="discover">Discover</button>
+  <button class="tab" data-p="utilities">Utilities</button>
+  <button class="tab" data-p="contacts">Contacts</button>
+</nav>
+
+<!-- ============ ITINERARY ============ -->
+<section class="panel active" id="itinerary">
+  <div class="hero">
+    <div class="glyph">港</div>
+    <div class="hero-inner">
+      <div class="eyebrow">A Happy Camper Journey</div>
+      <h1>The Browns<br><em>in Hong Kong</em></h1>
+      <div class="dates">19 – 22 OCTOBER 2026</div>
+      <div class="rule"></div>
+      <p class="blurb">Three hosted days before Japan — an easy, delicious opening act for Aaron, Michelle, Josh and his partner, looked after by Tomoko and Gerhard.</p>
+    </div>
+    <div class="scrollcue">Scroll ↓</div>
+  </div>
+
+  <div class="sec-head reveal">
+    <div class="kanji">食</div>
+    <h2>Three Days at the Table</h2>
+    <p>Four guests · two hosts · limousine and meet-and-greet throughout</p>
+  </div>
+
+  <div class="wrap">
+    <div class="days">
+
+      <!-- DAY 1 -->
+      <div class="day reveal">
+        <span class="num">一</span>
+        <span class="date">Monday 19 October · Arrival</span>
+        <span class="place">Touchdown in Hong Kong</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Lunch</div>
+        <h3>Yun <span class="cn">步雲</span></h3>
+        <p>An easy, restorative first table straight off the plane — unhurried Cantonese cooking to slip you into the city's rhythm. Clean flavours and gentle pacing, chosen to wake the palate rather than overwhelm it on arrival day.</p>
+        <span class="badge b-reserve">Reserving</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Dinner</div>
+        <h3>The Chairman <span class="stars">★</span></h3>
+        <p>Crowned No. 1 in Asia's 50 Best 2026 and Michelin-starred, Danny Yip's Central counter rewrites heritage Cantonese cooking with no theatrics. The steamed flowery crab in aged Shaoxing wine is the city's most coveted dish, with produce from the restaurant's own organic farm. One of Hong Kong's hardest tables.</p>
+        <span class="badge b-reserve">Reserving</span>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day reveal">
+        <span class="num">二</span>
+        <span class="date">Tuesday 20 October</span>
+        <span class="place">Island &amp; harbour</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Lunch</div>
+        <h3>Flower Drum <span class="cn">鋒膳</span></h3>
+        <p>A hidden, ingredient-driven Cantonese kitchen tucked inside a Wan Chai residential building — you're buzzed in like an insider. Refined yet quietly playful, with globally sourced produce: dry-aged Miyazaki pork-chop rice, the umami-rich "Soup of the Lord," and char siu with silky Kyushu eggs.</p>
+        <span class="badge b-reserve">Reserving</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Dinner</div>
+        <h3>Private Kitchen</h3>
+        <p>Essentially a friend's private chef space, normally kept for family and the inner circle. We secure it months ahead and ask the chef to hold the days on either side. A rare "inside-circle" evening — subject to the owner's own plans, with an equally special alternative on standby.</p>
+        <span class="badge b-optional">Subject to availability</span>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day reveal">
+        <span class="num">三</span>
+        <span class="date">Wednesday 21 October</span>
+        <span class="place">A grand finale</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Lunch</div>
+        <h3>Jockey Club</h3>
+        <p>Lunch inside the members-only world of the Hong Kong Jockey Club — a quietly grand institution few visitors ever see. Classic club dining and old-Hong-Kong atmosphere, reached through hosted access rather than a public booking.</p>
+        <span class="badge b-reserve">Reserving</span>
+      </div>
+      <div class="card reveal">
+        <div class="meal">Dinner</div>
+        <h3>Caprice <span class="stars">★ ★ ★</span></h3>
+        <p>French haute cuisine on the Four Seasons' fourth floor, looking out over Victoria Harbour — one of Asia's reference points for classic French cooking and an Asia's 50 Best 2026 name. A deep cellar and polished, unhurried service make an elegant close before the morning flight to Tokyo.</p>
+        <span class="badge b-reserve">Reserving</span>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="day reveal">
+        <span class="num">了</span>
+        <span class="date">Thursday 22 October</span>
+        <span class="place">Hong Kong → Tokyo</span>
+      </div>
+      <div class="closing reveal">
+        <div class="meal">Departure</div>
+        <h3>Onward to Japan</h3>
+        <p>The Hong Kong chapter closes with a transfer to the airport for the flight to Tokyo, where the Japan road trip begins. Meet-and-greet and limousine handle every step from door to gate.</p>
+      </div>
+
+    </div>
+
+    <div class="legend reveal">
+      <span><i style="background:#9ED2A6"></i>Confirmed</span>
+      <span><i style="background:#E2C36A"></i>Reserving</span>
+      <span><i style="background:#C9A0C6"></i>Subject to availability</span>
+      <span><i style="background:#8FB7D6"></i>Walk-in</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="mark">HAPPY CAMPER</div>
+    <div class="tag">Unlocking the journey, one thoughtful moment at a time</div>
+    <div class="loc">Hong Kong · Tokyo · Kyoto · London</div>
+  </div>
+</section>
+
+<!-- ============ DISCOVER ============ -->
+<section class="panel" id="discover">
+  <div class="sec-head reveal">
+    <div class="kanji">遊</div>
+    <h2>Discover Hong Kong</h2>
+    <p>Light, curated, never rushed — shaped each day to how you feel</p>
+  </div>
+  <div class="wrap">
+    <div class="grid">
+      <div class="tile reveal"><div class="cn">山頂</div><h3>Victoria Peak</h3><p>The skyline from above — island towers, harbour and Kowloon laid out together. We time it for clear light and quieter viewpoints.</p></div>
+      <div class="tile reveal"><div class="cn">維港</div><h3>The Harbour</h3><p>Star Ferry crossings and waterfront walks between Hong Kong Island and Kowloon, with the city's energy on full display.</p></div>
+      <div class="tile reveal"><div class="cn">街市</div><h3>Markets with a Chef</h3><p>A guided wander through produce and wet markets alongside a local chef — tasting as we go, with the stories behind each ingredient.</p></div>
+      <div class="tile reveal"><div class="cn">老區</div><h3>Old &amp; New Districts</h3><p>Sheung Wan's dried-goods lanes, Central's towers, and Kowloon's older streets — the layers of the city in a single afternoon.</p></div>
+      <div class="tile reveal"><div class="cn">廟宇</div><h3>Temples &amp; Galleries</h3><p>Quiet stops at temples and art spaces — incense coils, calligraphy, and contemporary work, chosen to break up the day.</p></div>
+      <div class="tile reveal"><div class="cn">咖啡</div><h3>Coffee Stops</h3><p>Considered pauses for coffee and people-watching between meals — the pace stays gentle, the tempo yours.</p></div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="mark">HAPPY CAMPER</div>
+    <div class="tag">Flexible touring with your hosts</div>
+    <div class="loc">Hong Kong · Tokyo · Kyoto · London</div>
+  </div>
+</section>
+
+<!-- ============ UTILITIES ============ -->
+<section class="panel" id="utilities">
+  <div class="sec-head reveal">
+    <div class="kanji">便</div>
+    <h2>Utilities</h2>
+    <p>The practical few things, in one place</p>
+  </div>
+  <div class="wrap">
+    <div class="conv reveal">
+      <h3>HKD ⇄ USD</h3>
+      <div class="rate">Pegged at ≈ 7.84 HKD to 1 USD</div>
+      <div class="row">
+        <label for="hkd">HKD</label>
+        <input id="hkd" type="number" inputmode="decimal" value="1000" aria-label="Hong Kong dollars">
+      </div>
+      <div class="swap">⇅</div>
+      <div class="row">
+        <label for="usd">USD</label>
+        <input id="usd" type="number" inputmode="decimal" aria-label="US dollars">
+      </div>
+    </div>
+
+    <div class="facts reveal">
+      <div class="fact"><span class="k">Emergency</span><span class="v">999 — police · fire · ambulance</span></div>
+      <div class="fact"><span class="k">Currency</span><span class="v">Hong Kong Dollar (HK$)</span></div>
+      <div class="fact"><span class="k">Power</span><span class="v">Type G plug · 220V · 50Hz</span></div>
+      <div class="fact"><span class="k">Language</span><span class="v">Cantonese &amp; English</span></div>
+      <div class="fact"><span class="k">Getting around</span><span class="v">Octopus card · MTR · Star Ferry</span></div>
+      <div class="fact"><span class="k">Tipping</span><span class="v">Not expected — 10% service usually added</span></div>
+      <div class="fact"><span class="k">Tourism line</span><span class="v">1878 200</span></div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="mark">HAPPY CAMPER</div>
+    <div class="tag">Everything handled, quietly</div>
+    <div class="loc">Hong Kong · Tokyo · Kyoto · London</div>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="panel" id="contacts">
+  <div class="sec-head reveal">
+    <div class="kanji">人</div>
+    <h2>Your Hosts</h2>
+    <p>Reach us any time, for anything</p>
+  </div>
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="role">Host · Happy Camper</div>
+      <h3>Gerhard</h3>
+      <p>Trip design, hosting and on-the-ground support throughout.</p>
+      <p><a href="mailto:hello@happycamper.food">hello@happycamper.food</a></p>
+    </div>
+    <div class="contact reveal">
+      <div class="role">Co-host · On the ground</div>
+      <h3>Tomoko Morikawa</h3>
+      <p>Hosting, translation, and the cultural and food side of every day.</p>
+    </div>
+    <div class="contact reveal">
+      <div class="role">Hong Kong · Emergency</div>
+      <h3>999</h3>
+      <p>Police, fire and ambulance — single number, English spoken.<br>Tourism hotline: 1878 200.</p>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="mark">HAPPY CAMPER</div>
+    <div class="tag">Unlocking the journey, one thoughtful moment at a time</div>
+    <div class="loc">Hong Kong · Tokyo · Kyoto · London</div>
+  </div>
+</section>
+
+<script>
+  // tabs
+  var tabs=document.querySelectorAll('.tab');
+  var panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('active')});
+      panels.forEach(function(p){p.classList.remove('active')});
+      t.classList.add('active');
+      document.getElementById(t.dataset.p).classList.add('active');
+      window.scrollTo({top:0,behavior:'instant'});
+      runReveal();
+    });
+  });
+
+  // FX converter
+  var R=7.84;
+  var hkd=document.getElementById('hkd'), usd=document.getElementById('usd');
+  function fromHkd(){var v=parseFloat(hkd.value);usd.value=isNaN(v)?'':(v/R).toFixed(2);}
+  function fromUsd(){var v=parseFloat(usd.value);hkd.value=isNaN(v)?'':(v*R).toFixed(2);}
+  hkd.addEventListener('input',fromHkd);
+  usd.addEventListener('input',fromUsd);
+  fromHkd();
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  function runReveal(){
+    document.querySelectorAll('.panel.active .reveal:not(.in)').forEach(function(el){io.observe(el);});
+  }
+  runReveal();
+<\/script>
+</body>
+</html>
+
+</script>
+<script type="text/html" id="doc-jp">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15100F">
 <title>An Autumn Passage North · Aaron & Michelle Brown</title>
@@ -820,6 +1458,64 @@ img{max-width:100%}
     var t=j.value; j.value=u.value?String(Math.round(parseFloat(u.value)*RATE)):''; u.value=t?(parseFloat(t)/RATE).toFixed(2):'';
   });
   fromJ();
+})();
+<\/script>
+
+</body>
+</html>
+
+</script>
+
+<script>
+(function(){
+  'use strict';
+  var TITLES={hk:'香港 · Hong Kong',jp:'日本 · Japan'};
+  var host=document.getElementById('frame-host');
+  var landing=document.getElementById('landing');
+  var viewer=document.getElementById('viewer');
+  var frames={};
+
+  function decode(key){
+    var raw=document.getElementById('doc-'+key).textContent;
+    return raw.replace(/<\\\/script>/g,'<\/script>');
+  }
+  function build(key){
+    var html=decode(key);
+    var blob=new Blob([html],{type:'text/html'});
+    var f=document.createElement('iframe');
+    f.className='legframe';
+    f.setAttribute('title',TITLES[key]);
+    f.src=URL.createObjectURL(blob);
+    host.appendChild(f);
+    frames[key]=f;
+  }
+  function openLeg(key){
+    if(!frames[key]) build(key);
+    Object.keys(frames).forEach(function(k){frames[k].classList.toggle('show',k===key);});
+    document.getElementById('viewer-title').textContent=TITLES[key];
+    landing.style.display='none';
+    viewer.classList.add('show');
+    if(location.hash!=='#'+key){history.pushState({leg:key},'','#'+key);}
+    window.scrollTo(0,0);
+  }
+  function showLanding(push){
+    viewer.classList.remove('show');
+    landing.style.display='';
+    if(push && location.hash){history.pushState({},'',location.pathname+location.search);}
+  }
+
+  document.querySelectorAll('.choice').forEach(function(b){
+    b.addEventListener('click',function(){openLeg(b.getAttribute('data-leg'));});
+  });
+  document.getElementById('backbtn').addEventListener('click',function(){history.back();});
+
+  window.addEventListener('popstate',function(e){
+    var key=(e.state&&e.state.leg)||((location.hash==='#hk'||location.hash==='#jp')?location.hash.slice(1):null);
+    if(key){openLeg(key);} else {showLanding(false);}
+  });
+
+  // deep link on load (e.g. refresh on #jp)
+  if(location.hash==='#hk'||location.hash==='#jp'){openLeg(location.hash.slice(1));}
 })();
 </script>
 
