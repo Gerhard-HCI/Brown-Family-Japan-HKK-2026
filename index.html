@@ -3,90 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#15100F">
+<meta name="theme-color" content="#241C17">
 <title>The Browns · Hong Kong → Japan → Hawaiʻi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{background:#15100F;-webkit-text-size-adjust:100%}
-body{background:#15100F;color:#F0E7D6;font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{background:#241C17;-webkit-text-size-adjust:100%}
+body{background:#241C17;color:#F2EADA;font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 
 /* ===== LANDING ===== */
 #landing{
   position:relative;min-height:100vh;min-height:100svh;overflow:hidden;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
-  text-align:center;padding:64px 24px;background:#15100F;
+  text-align:center;padding:64px 24px;background:#241C17;
 }
 #landing .glyph{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-48%);
   font-family:'Shippori Mincho',serif;font-weight:700;
-  font-size:min(58vw,440px);line-height:1;color:#1E1714;z-index:0;
+  font-size:min(58vw,440px);line-height:1;color:#332A24;z-index:0;
   user-select:none;pointer-events:none;
 }
 .cover{position:relative;z-index:1;max-width:680px;width:100%}
 .cover__eyebrow{
   font-family:'Jost',sans-serif;font-size:11.5px;font-weight:400;letter-spacing:5px;
-  text-transform:uppercase;color:#C5A35A;margin-bottom:26px;
+  text-transform:uppercase;color:#CBA964;margin-bottom:26px;
 }
 .cover__title{
   font-family:'Cormorant Garamond',serif;font-weight:300;
-  font-size:clamp(48px,12vw,92px);line-height:1;letter-spacing:1px;color:#F4ECDB;
+  font-size:clamp(48px,12vw,92px);line-height:1;letter-spacing:1px;color:#F7EFDF;
 }
 .cover__arc{
   font-family:'Shippori Mincho',serif;font-size:clamp(15px,3.6vw,21px);
-  letter-spacing:3px;color:#DBB76A;margin-top:20px;
+  letter-spacing:3px;color:#E0BE72;margin-top:20px;
 }
 .cover__dates{
   font-family:'Jost',sans-serif;font-size:12.5px;font-weight:300;letter-spacing:2.5px;
-  text-transform:uppercase;color:#9C8E76;margin-top:12px;
+  text-transform:uppercase;color:#B6A88B;margin-top:12px;
 }
-.cover__rule{width:1px;height:48px;background:linear-gradient(#C5A35A,transparent);margin:30px auto}
-.cover__lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:#C9BBA0;margin-bottom:34px}
+.cover__rule{width:1px;height:48px;background:linear-gradient(#CBA964,transparent);margin:30px auto}
+.cover__lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:#D6C9B0;margin-bottom:34px}
 
 .choices{display:grid;gap:16px;max-width:520px;margin:0 auto}
 @media(min-width:560px){.choices{grid-template-columns:1fr 1fr}}
 .choice{
   position:relative;cursor:pointer;text-align:left;
-  background:rgba(255,255,255,0.016);
-  border:1px solid rgba(197,163,90,0.28);border-radius:5px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(203,169,100,0.38);border-radius:5px;
   padding:24px 22px 20px;color:inherit;
   transition:border-color .25s ease,background .25s ease,transform .25s ease;
 }
-.choice:hover,.choice:focus-visible{border-color:#C5A35A;background:rgba(197,163,90,0.07);transform:translateY(-2px);outline:none}
-.choice__cn{display:block;font-family:'Shippori Mincho',serif;font-size:30px;color:#C5A35A;line-height:1}
-.choice__en{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:#F2E9D7;margin-top:8px;letter-spacing:.4px}
-.choice__meta{display:block;font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.4px;color:#9C8E76;margin-top:8px;line-height:1.5}
-.choice__go{display:inline-block;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#DBB76A;margin-top:16px}
-.cover__foot{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#6E6356;margin-top:34px}
+.choice:hover,.choice:focus-visible{border-color:#CBA964;background:rgba(203,169,100,0.1);transform:translateY(-2px);outline:none}
+.choice__cn{display:block;font-family:'Shippori Mincho',serif;font-size:30px;color:#CBA964;line-height:1}
+.choice__en{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:#F5ECDB;margin-top:8px;letter-spacing:.4px}
+.choice__meta{display:block;font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.4px;color:#B6A88B;margin-top:8px;line-height:1.5}
+.choice__go{display:inline-block;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#E0BE72;margin-top:16px}
+.cover__foot{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#8D8069;margin-top:34px}
 
 /* ===== VIEWER (holds a leg) ===== */
-#viewer{position:fixed;inset:0;z-index:20;display:none;flex-direction:column;background:#15100F}
+#viewer{position:fixed;inset:0;z-index:20;display:none;flex-direction:column;background:#241C17}
 #viewer.show{display:flex}
 #viewer-bar{
   flex:0 0 auto;height:48px;display:flex;align-items:center;gap:12px;
-  padding:0 6px 0 10px;background:#15100F;border-bottom:1px solid rgba(197,163,90,0.28);
+  padding:0 6px 0 10px;background:#241C17;border-bottom:1px solid rgba(203,169,100,0.34);
 }
 #backbtn{
   display:inline-flex;align-items:center;gap:6px;cursor:pointer;
-  background:none;border:none;color:#DBB76A;
+  background:none;border:none;color:#E0BE72;
   font-family:'Jost',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:1.5px;
   text-transform:uppercase;padding:10px 10px;border-radius:4px;
 }
-#backbtn:hover{color:#F2E9D7}
+#backbtn:hover{color:#F5ECDB}
 #viewer-title{
   flex:1;text-align:center;font-family:'Shippori Mincho',serif;font-size:14px;
-  color:#BEAF93;letter-spacing:1.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  color:#C8BA9C;letter-spacing:1.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 #viewer-spacer{width:96px;flex:0 0 auto}
 #frame-host{flex:1 1 auto;position:relative}
-.legframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:#15100F}
+.legframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:#241C17}
 .legframe.show{display:block}
 
 @media (prefers-reduced-motion:reduce){.choice{transition:none}}
-:focus-visible{outline:2px solid #DBB76A;outline-offset:3px;border-radius:2px}
+:focus-visible{outline:2px solid #E0BE72;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -142,18 +142,18 @@ a{color:inherit;text-decoration:none}
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --lacquer:#15100F;
-    --lacquer-2:#1E1715;
+    --lacquer:#241c17;
+    --lacquer-2:#302721;
     --gold:#C5A35A;
     --gold-soft:#D8BE86;
     --paper:#EDE4D3;
-    --paper-dim:#A99A82;
+    --paper-dim:#c4b596;
     --line:rgba(197,163,90,.28);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{background-color:#15100F;-webkit-text-size-adjust:100%}
+  html{background-color:#241c17;-webkit-text-size-adjust:100%}
   body{
-    background-color:#15100F;
+    background-color:#241c17;
     color:#EDE4D3;
     font-family:'Jost',sans-serif;
     font-weight:300;
@@ -173,7 +173,7 @@ a{color:inherit;text-decoration:none}
   }
   .tab{
     appearance:none;border:0;background:transparent;cursor:pointer;
-    color:#A99A82;
+    color:#c4b596;
     font-family:'Jost',sans-serif;font-weight:400;
     font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
     padding:8px 12px;border-radius:2px;
@@ -187,7 +187,7 @@ a{color:inherit;text-decoration:none}
   }
 
   /* ---------- panels ---------- */
-  .panel{display:none;background-color:#15100F}
+  .panel{display:none;background-color:#241c17}
   .panel.active{display:block;animation:fade .5s ease}
   @keyframes fade{from{opacity:0}to{opacity:1}}
   .wrap{max-width:760px;margin:0 auto;padding:0 24px}
@@ -197,7 +197,7 @@ a{color:inherit;text-decoration:none}
     position:relative;overflow:hidden;
     min-height:calc(100vh - 54px);
     min-height:calc(100svh - 54px);
-    background-color:#15100F;
+    background-color:#241c17;
     display:flex;flex-direction:column;justify-content:center;align-items:center;
     text-align:center;padding:40px 24px 64px;
   }
@@ -205,7 +205,7 @@ a{color:inherit;text-decoration:none}
     position:absolute;top:50%;left:50%;transform:translate(-50%,-46%);
     font-family:'Shippori Mincho',serif;
     font-size:min(64vw,460px);line-height:1;
-    color:#1E1715;
+    color:#302721;
     z-index:0;user-select:none;pointer-events:none;
   }
   .hero-inner{position:relative;z-index:1}
@@ -222,16 +222,16 @@ a{color:inherit;text-decoration:none}
   .hero .dates{
     font-family:'Shippori Mincho',serif;
     font-size:clamp(15px,3.4vw,19px);letter-spacing:.16em;
-    color:#A99A82;margin-top:18px;
+    color:#c4b596;margin-top:18px;
   }
   .hero .rule{width:54px;height:1px;background:#C5A35A;margin:26px auto}
   .hero .blurb{
-    max-width:430px;margin:0 auto;color:#A99A82;
+    max-width:430px;margin:0 auto;color:#c4b596;
     font-size:14.5px;
   }
   .scrollcue{
     position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
-    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#A99A82;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#c4b596;
     z-index:1;
   }
 
@@ -245,24 +245,19 @@ a{color:inherit;text-decoration:none}
     font-family:'Cormorant Garamond',serif;font-weight:500;
     font-size:clamp(26px,6vw,40px);color:#EDE4D3;
   }
-  .sec-head p{color:#A99A82;font-size:13.5px;margin-top:8px}
+  .sec-head p{color:#c4b596;font-size:13.5px;margin-top:8px}
 
   /* ---------- day timeline ---------- */
   .days{position:relative;padding:10px 0 30px}
-  .days::before{
-    content:"";position:absolute;left:50%;top:0;bottom:80px;width:1px;
-    background:linear-gradient(#C5A35A,rgba(197,163,90,0));
-    transform:translateX(-50%);
-  }
   .day{position:relative;padding:46px 0 4px;text-align:center}
   .day .num{
     font-family:'Shippori Mincho',serif;
     font-size:30px;color:#C5A35A;
-    background:#15100F;display:inline-block;padding:0 14px;position:relative;z-index:1;
+    background:#241c17;display:inline-block;padding:0 14px;position:relative;z-index:1;
   }
   .day .date{
     display:block;margin-top:4px;
-    font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#A99A82;
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#c4b596;
   }
   .day .place{
     display:block;margin-top:2px;
@@ -271,7 +266,7 @@ a{color:inherit;text-decoration:none}
   }
 
   .card{
-    background-color:#1E1715;
+    background-color:#302721;
     border:1px solid rgba(197,163,90,.18);
     border-radius:3px;
     text-align:left;
@@ -286,9 +281,9 @@ a{color:inherit;text-decoration:none}
     font-size:23px;color:#EDE4D3;line-height:1.15;
     display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;
   }
-  .card h3 .cn{font-family:'Shippori Mincho',serif;font-size:16px;color:#A99A82;font-weight:400}
+  .card h3 .cn{font-family:'Shippori Mincho',serif;font-size:16px;color:#c4b596;font-weight:400}
   .card h3 .stars{font-size:13px;letter-spacing:1px;color:#C5A35A}
-  .card p{color:#A99A82;font-size:13.5px;margin-top:9px}
+  .card p{color:#c4b596;font-size:13.5px;margin-top:9px}
 
   .badge{
     display:inline-block;margin-top:13px;
@@ -299,7 +294,7 @@ a{color:inherit;text-decoration:none}
   .b-reserve{color:#E2C36A;border-color:rgba(226,195,106,.5)}
   .b-optional{color:#C9A0C6;border-color:rgba(201,160,198,.5)}
   .b-walkin{color:#8FB7D6;border-color:rgba(143,183,214,.5)}
-  .b-visit{color:#A99A82;border-color:rgba(169,154,130,.5)}
+  .b-visit{color:#c4b596;border-color:rgba(169,154,130,.5)}
 
   /* closing element */
   .closing{
@@ -309,7 +304,7 @@ a{color:inherit;text-decoration:none}
   }
   .closing .meal{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:#C5A35A;margin-bottom:8px}
   .closing h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;font-weight:500}
-  .closing p{color:#A99A82;font-size:13.5px;margin-top:9px}
+  .closing p{color:#c4b596;font-size:13.5px;margin-top:9px}
 
   /* legend */
   .legend{
@@ -317,30 +312,30 @@ a{color:inherit;text-decoration:none}
     border-top:1px solid rgba(197,163,90,.18);
     display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;
   }
-  .legend span{font-size:10.5px;letter-spacing:.12em;color:#A99A82;display:flex;align-items:center;gap:7px}
+  .legend span{font-size:10.5px;letter-spacing:.12em;color:#c4b596;display:flex;align-items:center;gap:7px}
   .legend i{width:9px;height:9px;border-radius:99px;display:inline-block}
 
   /* ---------- discover / generic cards ---------- */
   .grid{display:grid;gap:16px;padding:6px 0 40px}
   .tile{
-    background-color:#1E1715;border:1px solid rgba(197,163,90,.18);
+    background-color:#302721;border:1px solid rgba(197,163,90,.18);
     border-radius:3px;padding:22px 22px;
   }
   .tile .cn{font-family:'Shippori Mincho',serif;color:#C5A35A;font-size:16px}
   .tile h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;color:#EDE4D3;margin-top:4px}
-  .tile p{color:#A99A82;font-size:13.5px;margin-top:8px}
+  .tile p{color:#c4b596;font-size:13.5px;margin-top:8px}
 
   /* ---------- converter ---------- */
   .conv{
-    background-color:#1E1715;border:1px solid rgba(197,163,90,.22);
+    background-color:#302721;border:1px solid rgba(197,163,90,.22);
     border-radius:4px;padding:26px 24px;max-width:520px;margin:6px auto 0;
   }
   .conv h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;text-align:center;margin-bottom:4px}
-  .conv .rate{text-align:center;color:#A99A82;font-size:12px;letter-spacing:.08em;margin-bottom:22px}
+  .conv .rate{text-align:center;color:#c4b596;font-size:12px;letter-spacing:.08em;margin-bottom:22px}
   .conv .row{display:flex;align-items:center;gap:12px;margin:12px 0}
   .conv label{width:54px;font-size:12px;letter-spacing:.16em;color:#C5A35A;text-transform:uppercase}
   .conv input{
-    flex:1;background-color:#15100F;border:1px solid rgba(197,163,90,.3);
+    flex:1;background-color:#241c17;border:1px solid rgba(197,163,90,.3);
     color:#EDE4D3;font-family:'Jost',sans-serif;font-size:18px;
     padding:11px 14px;border-radius:3px;width:100%;
   }
@@ -357,23 +352,23 @@ a{color:inherit;text-decoration:none}
 
   /* ---------- contacts ---------- */
   .contact{
-    background-color:#1E1715;border:1px solid rgba(197,163,90,.18);border-radius:3px;
+    background-color:#302721;border:1px solid rgba(197,163,90,.18);border-radius:3px;
     padding:22px 22px;max-width:520px;margin:0 auto 16px;
   }
   .contact .role{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#C5A35A}
   .contact h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:#EDE4D3;margin-top:4px}
-  .contact p{color:#A99A82;font-size:13.5px;margin-top:6px}
+  .contact p{color:#c4b596;font-size:13.5px;margin-top:6px}
   .contact a{color:#D8BE86;text-decoration:none;border-bottom:1px solid rgba(216,190,134,.4)}
 
   /* ---------- footer ---------- */
   .foot{
     text-align:center;padding:50px 24px 60px;
     border-top:1px solid rgba(197,163,90,.16);margin-top:30px;
-    background-color:#15100F;
+    background-color:#241c17;
   }
   .foot .mark{font-family:'Cormorant Garamond',serif;font-size:20px;color:#C5A35A;letter-spacing:.04em}
-  .foot .tag{color:#A99A82;font-size:12px;font-style:italic;margin-top:6px}
-  .foot .loc{color:#6E6356;font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:14px}
+  .foot .tag{color:#c4b596;font-size:12px;font-style:italic;margin-top:6px}
+  .foot .loc{color:#8d8069;font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:14px}
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
@@ -426,13 +421,13 @@ a{color:inherit;text-decoration:none}
       <div class="card reveal">
         <div class="meal">Lunch</div>
         <h3>Yun <span class="cn">步雲</span></h3>
-        <p>An easy, restorative first table straight off the plane — unhurried Cantonese cooking to slip you into the city's rhythm. Clean flavours and gentle pacing, chosen to wake the palate rather than overwhelm it on arrival day.</p>
+        <p>One of Hong Kong's hottest and hardest-to-book tables — an intimate, high-end Cantonese kitchen on Hollywood Road in Sheung Wan. Chef-driven and ingredient-led, it puts live wok-hei centre stage, plating classic Cantonese flavour with modern, creative precision. A coveted first lunch, and a statement way to open the trip.</p>
         <span class="badge b-reserve">Reserving</span>
       </div>
       <div class="card reveal">
         <div class="meal">Dinner</div>
         <h3>The Chairman <span class="stars">★</span></h3>
-        <p>Crowned No. 1 in Asia's 50 Best 2026 and Michelin-starred, Danny Yip's Central counter rewrites heritage Cantonese cooking with no theatrics. The steamed flowery crab in aged Shaoxing wine is the city's most coveted dish, with produce from the restaurant's own organic farm. One of Hong Kong's hardest tables.</p>
+        <p>Named the No. 1 restaurant in Asia for 2026 and Michelin-starred, Danny Yip's counter in Central is the benchmark for heritage Cantonese cooking — no theatrics, just exceptional sourcing from its own organic farm. The signature steamed flowery crab in aged Shaoxing wine is the stuff of legend. Quite possibly the single hardest table in the city, and an unforgettable first night.</p>
         <span class="badge b-reserve">Reserving</span>
       </div>
 
@@ -445,13 +440,13 @@ a{color:inherit;text-decoration:none}
       <div class="card reveal">
         <div class="meal">Lunch</div>
         <h3>Flower Drum <span class="cn">鋒膳</span></h3>
-        <p>A hidden, ingredient-driven Cantonese kitchen tucked inside a Wan Chai residential building — you're buzzed in like an insider. Refined yet quietly playful, with globally sourced produce: dry-aged Miyazaki pork-chop rice, the umami-rich "Soup of the Lord," and char siu with silky Kyushu eggs.</p>
+        <p>A hidden Cantonese kitchen tucked inside a Wan Chai residential block — you're buzzed in like a regular. Chef Nansen Lai cooks refined but playful "dip-tau-faan," sourcing globally: dry-aged Miyazaki pork-chop rice, the umami-rich "Soup of the Lord," char siu with silky Kyushu eggs. Insider, generous and deeply personal.</p>
         <span class="badge b-reserve">Reserving</span>
       </div>
       <div class="card reveal">
         <div class="meal">Dinner</div>
         <h3>Private Kitchen</h3>
-        <p>Essentially a friend's private chef space, normally kept for family and the inner circle. We secure it months ahead and ask the chef to hold the days on either side. A rare "inside-circle" evening — subject to the owner's own plans, with an equally special alternative on standby.</p>
+        <p>Essentially a friend's private chef space — normally kept for family and the inner circle, and a genuine "inside the velvet rope" evening. We secure it months ahead and ask the chef to hold the days on either side. Subject to the owner's own plans, with an equally special alternative on standby.</p>
         <span class="badge b-optional">Subject to availability</span>
       </div>
 
@@ -464,13 +459,13 @@ a{color:inherit;text-decoration:none}
       <div class="card reveal">
         <div class="meal">Lunch</div>
         <h3>Jockey Club</h3>
-        <p>Lunch inside the members-only world of the Hong Kong Jockey Club — a quietly grand institution few visitors ever see. Classic club dining and old-Hong-Kong atmosphere, reached through hosted access rather than a public booking.</p>
+        <p>A members-only dim sum lunch at the Hong Kong Jockey Club — among the city's most exclusive institutions, where you come only as a member's guest. Steamer baskets of refined Cantonese dim sum in the hilltop clubhouses above Happy Valley racecourse: old-Hong-Kong grandeur and quiet privilege, and a glimpse few visitors ever get.</p>
         <span class="badge b-reserve">Reserving</span>
       </div>
       <div class="card reveal">
         <div class="meal">Dinner</div>
         <h3>Caprice <span class="stars">★ ★ ★</span></h3>
-        <p>French haute cuisine on the Four Seasons' fourth floor, looking out over Victoria Harbour — one of Asia's reference points for classic French cooking and an Asia's 50 Best 2026 name. A deep cellar and polished, unhurried service make an elegant close before the morning flight to Tokyo.</p>
+        <p>Three Michelin stars for an eighth straight year — chef Guillaume Galliot's classic French haute cuisine high above Victoria Harbour, with an award-winning cellar to match. For your final Hong Kong night we've taken Caprice's private dining room and a bespoke menu created specially for the table — an intimate, elevated send-off before the morning flight to Tokyo.</p>
         <span class="badge b-reserve">Reserving</span>
       </div>
 
@@ -641,17 +636,17 @@ a{color:inherit;text-decoration:none}
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#15100F">
+<meta name="theme-color" content="#241c17">
 <title>An Autumn Passage North · Aaron & Michelle Brown</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background-color:#15100F}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background-color:#241c17}
 body{
   font-family:'Cormorant Garamond',Georgia,serif;
-  background-color:#15100F;
+  background-color:#241c17;
   color:#F0E7D6;
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
@@ -664,7 +659,7 @@ img{max-width:100%}
 /* ─── TOP BAR / TABS ─── */
 .topbar{
   position:fixed;top:0;left:0;right:0;z-index:1000;height:54px;
-  background-color:#15100F;
+  background-color:#241c17;
   border-bottom:1px solid rgba(197,163,90,0.28);
   display:flex;align-items:center;gap:8px;
   padding:0 14px;
@@ -681,14 +676,14 @@ img{max-width:100%}
   flex-shrink:0;background:none;border:none;cursor:pointer;
   font-family:'Jost',sans-serif;font-size:11px;font-weight:500;
   letter-spacing:1.6px;text-transform:uppercase;
-  color:#9C8E76;padding:18px 11px 16px;
+  color:#b6a88b;padding:18px 11px 16px;
   border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
 }
 .tab-btn.active{color:#E0C588;border-bottom-color:#C5A35A}
 .tab-btn:hover{color:#DBB76A}
 
 /* ─── PANELS ─── */
-.panel{display:none;background-color:#15100F}
+.panel{display:none;background-color:#241c17}
 .panel.active{display:block;animation:panelFade .4s ease both}
 @keyframes panelFade{from{opacity:0}to{opacity:1}}
 .wrap{max-width:760px;margin:0 auto;padding:0 26px}
@@ -697,13 +692,13 @@ img{max-width:100%}
 .hero{
   min-height:calc(100vh - 54px);
   min-height:calc(100svh - 54px);
-  background-color:#15100F;
+  background-color:#241c17;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   text-align:center;position:relative;overflow:hidden;padding:60px 26px 80px;
 }
 .hero__kanji{
   position:absolute;font-family:'Shippori Mincho',serif;font-weight:700;
-  font-size:54vh;line-height:1;color:#1E1714;
+  font-size:54vh;line-height:1;color:#302721;
   top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;
   pointer-events:none;user-select:none;
 }
@@ -720,15 +715,15 @@ img{max-width:100%}
 .hero__title em{font-style:italic;color:#DBB76A}
 .hero__sub{
   font-family:'Shippori Mincho',serif;font-size:clamp(15px,3.2vw,20px);
-  color:#BEAF93;font-weight:400;letter-spacing:3px;margin-bottom:34px;
+  color:#d0c1a1;font-weight:400;letter-spacing:3px;margin-bottom:34px;
 }
 .hero__meta{
   font-family:'Jost',sans-serif;font-size:13.5px;font-weight:300;letter-spacing:1.5px;
-  color:#9C8E76;line-height:2;text-transform:uppercase;
+  color:#b6a88b;line-height:2;text-transform:uppercase;
 }
 .hero__rule{width:1px;height:54px;background:linear-gradient(#C5A35A,transparent);margin:36px auto 0}
 .hero__dedication{
-  font-style:italic;font-size:17px;color:#C9BBA0;margin-top:30px;line-height:1.6;
+  font-style:italic;font-size:17px;color:#dacdb3;margin-top:30px;line-height:1.6;
 }
 .hero__dedication strong{font-style:normal;font-weight:500;color:#E0C588}
 
@@ -739,7 +734,7 @@ img{max-width:100%}
   text-align:center;font-style:italic;
 }
 .intro__lead .drop{color:#DBB76A;font-style:normal;font-weight:500}
-.intro__body{font-size:18px;color:#C9BBA0;line-height:1.85;margin-top:24px;text-align:center}
+.intro__body{font-size:18px;color:#dacdb3;line-height:1.85;margin-top:24px;text-align:center}
 
 .legend{
   margin:42px auto 0;max-width:680px;
@@ -748,11 +743,11 @@ img{max-width:100%}
 }
 .legend__title{
   font-family:'Jost',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:3px;
-  text-transform:uppercase;color:#9C8E76;text-align:center;margin-bottom:14px;
+  text-transform:uppercase;color:#b6a88b;text-align:center;margin-bottom:14px;
 }
 .legend__row{display:flex;flex-wrap:wrap;justify-content:center;gap:9px 16px}
 .legend__item{display:flex;align-items:center;gap:7px;font-family:'Jost',sans-serif;
-  font-size:12px;letter-spacing:.4px;color:#C9BBA0}
+  font-size:12px;letter-spacing:.4px;color:#dacdb3}
 .legend__dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
 
 /* status colours — echo the booking spreadsheet */
@@ -760,7 +755,7 @@ img{max-width:100%}
 .dot-reserving{background:#D7A94E}
 .dot-walkin{background:#6FA0C0}
 .dot-optional{background:#9990B8}
-.dot-visit{background:#8A7E68}
+.dot-visit{background:#a4957c}
 
 /* ─── CHAPTER DIVIDER ─── */
 .chapter{text-align:center;padding:78px 0 30px}
@@ -770,12 +765,12 @@ img{max-width:100%}
 }
 .chapter__day{
   font-family:'Jost',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;
-  color:#9C8E76;margin-bottom:14px;
+  color:#b6a88b;margin-bottom:14px;
 }
 .chapter__title{font-size:34px;font-weight:300;color:#F0E7D6;letter-spacing:.5px;line-height:1.2}
 .chapter__title em{font-style:italic;color:#DBB76A}
 .chapter__route{
-  font-family:'Shippori Mincho',serif;font-size:14px;color:#A99B80;margin-top:12px;letter-spacing:1px;
+  font-family:'Shippori Mincho',serif;font-size:14px;color:#c4b595;margin-top:12px;letter-spacing:1px;
 }
 .chapter__drive{
   display:inline-block;margin-top:14px;font-family:'Jost',sans-serif;font-size:11px;
@@ -789,7 +784,7 @@ img{max-width:100%}
   background:linear-gradient(transparent,rgba(197,163,90,0.4) 8%,rgba(197,163,90,0.4) 92%,transparent)}
 .stop{position:relative;padding:0 0 36px 30px}
 .stop::before{content:'';position:absolute;left:-29px;top:7px;width:11px;height:11px;border-radius:50%;
-  background:#15100F;border:1.5px solid #C5A35A;z-index:1}
+  background:#241c17;border:1.5px solid #C5A35A;z-index:1}
 .stop--star::before{background:#C5A35A;box-shadow:0 0 0 3px rgba(197,163,90,0.18)}
 .stop__key{
   font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;
@@ -799,9 +794,9 @@ img{max-width:100%}
 .stop__name{font-size:23px;font-weight:500;color:#F2E9D7;line-height:1.25;letter-spacing:.3px}
 .stop__name a{border-bottom:1px solid rgba(197,163,90,0.4);transition:border-color .2s}
 .stop__name a:hover{border-color:#DBB76A}
-.stop__jp{font-family:'Shippori Mincho',serif;font-size:14px;color:#A99B80;font-weight:400;margin-left:8px}
-.stop__loc{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1px;color:#9C8E76;margin-top:4px;text-transform:uppercase}
-.stop__note{font-size:17px;color:#CDBFA4;line-height:1.78;margin-top:11px}
+.stop__jp{font-family:'Shippori Mincho',serif;font-size:14px;color:#c4b595;font-weight:400;margin-left:8px}
+.stop__loc{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1px;color:#b6a88b;margin-top:4px;text-transform:uppercase}
+.stop__note{font-size:17px;color:#ded1b8;line-height:1.78;margin-top:11px}
 .stop__stars{color:#DBB76A;letter-spacing:2px;font-size:14px}
 
 /* status badge */
@@ -813,7 +808,7 @@ img{max-width:100%}
 .b-reserving{color:#E6C173;background:rgba(215,169,78,0.12);border:1px solid rgba(215,169,78,0.45)}
 .b-walkin{color:#9FC6DE;background:rgba(111,160,192,0.13);border:1px solid rgba(111,160,192,0.45)}
 .b-optional{color:#BDB2DA;background:rgba(153,144,184,0.12);border:1px solid rgba(153,144,184,0.42)}
-.b-visit{color:#B7AA8E;background:rgba(138,126,104,0.12);border:1px solid rgba(138,126,104,0.4)}
+.b-visit{color:#cabc9b;background:rgba(138,126,104,0.12);border:1px solid rgba(138,126,104,0.4)}
 
 /* booking confirmation detail */
 .booking{display:flex;align-items:flex-start;gap:9px;margin-top:13px;padding:10px 14px;
@@ -834,23 +829,23 @@ img{max-width:100%}
 .finale__key{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#C5A35A;margin-bottom:10px}
 .finale__name{font-size:30px;font-weight:400;color:#F2E9D7;letter-spacing:.5px}
 .finale__name em{font-style:italic;color:#DBB76A}
-.finale__time{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:2px;color:#A99B80;margin-top:10px;text-transform:uppercase}
-.finale__note{font-size:16px;color:#C9BBA0;line-height:1.7;margin-top:16px;font-style:italic;max-width:430px;margin-left:auto;margin-right:auto}
+.finale__time{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:2px;color:#c4b595;margin-top:10px;text-transform:uppercase}
+.finale__note{font-size:16px;color:#dacdb3;line-height:1.7;margin-top:16px;font-style:italic;max-width:430px;margin-left:auto;margin-right:auto}
 
 /* ─── FOOTER ─── */
 .footer{text-align:center;padding:84px 26px 70px;margin-top:54px;border-top:1px solid rgba(197,163,90,0.18)}
 .footer__kanji{font-family:'Shippori Mincho',serif;font-size:30px;color:#C5A35A;margin-bottom:18px}
-.footer__text{font-style:italic;font-size:18px;color:#C9BBA0;line-height:1.7}
+.footer__text{font-style:italic;font-size:18px;color:#dacdb3;line-height:1.7}
 .footer__text strong{font-style:normal;font-weight:500;color:#E0C588}
-.footer__sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#9C8E76;margin-top:26px}
+.footer__sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b6a88b;margin-top:26px}
 
 /* ─── SECTION HEADERS (Discover/Utilities/Contacts) ─── */
 .phead{text-align:center;padding:60px 0 6px}
 .phead__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#C5A35A;margin-bottom:16px}
 .phead__title{font-size:clamp(36px,8vw,52px);font-weight:300;color:#F4ECDB;letter-spacing:1px}
 .phead__title em{font-style:italic;color:#DBB76A}
-.phead__sub{font-family:'Shippori Mincho',serif;font-size:14px;color:#A99B80;letter-spacing:2px;margin-top:10px}
-.slabel{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#9C8E76;margin:44px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(197,163,90,0.18)}
+.phead__sub{font-family:'Shippori Mincho',serif;font-size:14px;color:#c4b595;letter-spacing:2px;margin-top:10px}
+.slabel{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#b6a88b;margin:44px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(197,163,90,0.18)}
 
 /* cards */
 .card{border:1px solid rgba(197,163,90,0.2);border-radius:5px;background:rgba(255,255,255,0.016);margin-bottom:14px;overflow:hidden}
@@ -864,7 +859,7 @@ img{max-width:100%}
 .drow:hover{background:rgba(197,163,90,0.06)}
 .drow__info{flex:1;min-width:0}
 .drow__name{font-size:18px;font-weight:500;color:#EBE1CC;line-height:1.3}
-.drow__sub{font-family:'Jost',sans-serif;font-size:12px;color:#9C8E76;margin-top:2px;font-style:italic}
+.drow__sub{font-family:'Jost',sans-serif;font-size:12px;color:#b6a88b;margin-top:2px;font-style:italic}
 .drow__arr{color:#C5A35A;font-size:18px;flex-shrink:0;opacity:.8}
 
 /* feature (editor's reference) */
@@ -875,31 +870,31 @@ img{max-width:100%}
 .feature__title{font-size:27px;font-weight:300;color:#F2E9D7;letter-spacing:.3px}
 .feature__by{font-style:italic;font-size:15px;color:#DBB76A;margin:3px 0 13px}
 .feature__by .c{font-style:normal;font-family:'Jost',sans-serif;font-size:11px;opacity:.7;margin-right:4px}
-.feature__p{font-size:16px;color:#C9BBA0;line-height:1.65;margin-bottom:18px}
+.feature__p{font-size:16px;color:#dacdb3;line-height:1.65;margin-bottom:18px}
 .feature__btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.btn-gold{display:inline-flex;align-items:center;gap:6px;background:#C5A35A;color:#15100F;
+.btn-gold{display:inline-flex;align-items:center;gap:6px;background:#C5A35A;color:#241c17;
   font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
   padding:11px 20px;border-radius:30px}
 .btn-ghost{display:inline-flex;align-items:center;gap:6px;color:#E0C588;border:1px solid rgba(197,163,90,0.4);
   font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;padding:10px 16px;border-radius:30px}
-.feature__tip{margin-top:16px;font-style:italic;font-size:14px;color:#A99B80;line-height:1.55;padding-left:14px;border-left:1px solid rgba(197,163,90,0.35)}
+.feature__tip{margin-top:16px;font-style:italic;font-size:14px;color:#c4b595;line-height:1.55;padding-left:14px;border-left:1px solid rgba(197,163,90,0.35)}
 
 /* utilities */
 .util-title{font-size:20px;font-weight:500;color:#EFE5D1;letter-spacing:.4px;padding:16px 20px 0}
 .fx{display:flex;gap:10px;align-items:flex-end;padding:14px 20px 6px}
 .fx__group{flex:1}
-.fx__lab{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#9C8E76;margin-bottom:6px}
-.fx__in{width:100%;padding:11px 13px;background:#1E1714;border:1px solid rgba(197,163,90,0.3);border-radius:4px;
+.fx__lab{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#b6a88b;margin-bottom:6px}
+.fx__in{width:100%;padding:11px 13px;background:#302721;border:1px solid rgba(197,163,90,0.3);border-radius:4px;
   color:#F0E7D6;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;outline:none}
 .fx__in:focus{border-color:#C5A35A}
 .fx__swap{width:40px;height:40px;border-radius:50%;flex-shrink:0;margin-bottom:2px;cursor:pointer;
   background:rgba(197,163,90,0.14);border:1px solid rgba(197,163,90,0.3);color:#DBB76A;font-size:17px}
-.fx__rate{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.5px;color:#9C8E76;text-align:center;padding:8px 20px 18px}
+.fx__rate{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.5px;color:#b6a88b;text-align:center;padding:8px 20px 18px}
 .ilist{list-style:none;padding:4px 20px 8px}
 .ilist li{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid rgba(197,163,90,0.1);font-size:16px;line-height:1.6}
 .ilist li:last-child{border-bottom:none}
 .ilist .em{font-size:18px;flex-shrink:0}
-.ilist .tx{color:#C9BBA0}
+.ilist .tx{color:#dacdb3}
 .ilist .tx strong{display:block;color:#EBE1CC;font-weight:600;font-size:16px;letter-spacing:.3px;margin-bottom:1px}
 
 /* contacts */
@@ -909,12 +904,12 @@ img{max-width:100%}
 .contact__ic{width:42px;height:42px;border-radius:11px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
   font-size:19px;background:rgba(197,163,90,0.13);border:1px solid rgba(197,163,90,0.25)}
 .contact__nm{font-size:18px;font-weight:500;color:#EFE5D1;line-height:1.2}
-.contact__sub{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.4px;color:#9C8E76;margin-top:2px}
+.contact__sub{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.4px;color:#b6a88b;margin-top:2px}
 .callbtn{display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
   font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;
   padding:9px 16px;border-radius:30px;background:rgba(197,163,90,0.15);border:1px solid rgba(197,163,90,0.4);color:#E0C588}
 .callbtn.sos{background:rgba(176,60,52,0.18);border-color:rgba(200,90,80,0.5);color:#E8A99F}
-.pnote{font-size:15px;color:#A99B80;font-style:italic;line-height:1.6;text-align:center;padding:8px 10px 0}
+.pnote{font-size:15px;color:#c4b595;font-style:italic;line-height:1.6;text-align:center;padding:8px 10px 0}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
@@ -1057,7 +1052,7 @@ img{max-width:100%}
         <div class="stop__name"><a href="https://maps.google.com/?q=清津峡渓谷トンネル" target="_blank" rel="noopener">Kiyotsu Gorge — Tunnel of Light</a><span class="stop__jp">清津峡</span></div>
         <div class="stop__loc">Tokamachi · 08:30 entry · ~30 min from the ryokan</div>
         <p class="stop__note">One of Japan's three great gorges, its tunnel ending in the mirror-pool artwork — a centrepiece of the Echigo-Tsumari art field — that frames the cliffs and the autumn maples. Your timed slot is the first of the day, at peak foliage.</p>
-        <div class="booking"><span class="tick">✓ Booked</span><span>“Echigo-Tsumari 2026” common pass · Tunnel of Light entry · 4 adults · 08:30, Mon 2 Nov · ref <span class="ref">155459XA6840</span><br><span style="color:#9C8E76">QR tickets held in the ASOVIEW app</span></span></div>
+        <div class="booking"><span class="tick">✓ Booked</span><span>“Echigo-Tsumari 2026” common pass · Tunnel of Light entry · 4 adults · 08:30, Mon 2 Nov · ref <span class="ref">155459XA6840</span><br><span style="color:#b6a88b">QR tickets held in the ASOVIEW app</span></span></div>
       </div>
       <div class="stop">
         <div class="stop__key">Morning · Activity <span class="badge b-visit">Visit</span></div>
@@ -1184,7 +1179,7 @@ img{max-width:100%}
       </div>
       <div class="stop">
         <div class="stop__key">Lunch <span class="badge b-optional">Optional</span></div>
-        <div class="stop__name"><a href="https://maps.google.com/?q=廻転寿司弁慶+佐渡本店" target="_blank" rel="noopener">Benkei Honten</a><span class="stop__jp">廻転寿司 弁慶</span> <span style="font-size:14px;color:#A99B80">/ Chozaburo</span></div>
+        <div class="stop__name"><a href="https://maps.google.com/?q=廻転寿司弁慶+佐渡本店" target="_blank" rel="noopener">Benkei Honten</a><span class="stop__jp">廻転寿司 弁慶</span> <span style="font-size:14px;color:#c4b595">/ Chozaburo</span></div>
         <div class="stop__loc">Sado · Benkei open Thu</div>
         <p class="stop__note">Sado's celebrated conveyor-sushi — the island's morning catch over 100% Sado Koshihikari rice. Famously good and famously good value, exactly the island lunch the day calls for. Benkei is open Thursday; Chozaburo (長三郎鮨) is the quieter alternative.</p>
       </div>
@@ -1514,7 +1509,6 @@ img{max-width:100%}
     if(key){openLeg(key);} else {showLanding(false);}
   });
 
-  // deep link on load (e.g. refresh on #jp)
   if(location.hash==='#hk'||location.hash==='#jp'){openLeg(location.hash.slice(1));}
 })();
 </script>
